@@ -1,24 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CONNECT-SPHERE</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ConnectSphere — Sign Up</title>
+  <link rel="stylesheet" href="auth.css" />
 </head>
+
 <body>
-    <h1>Welcome to CONNECT-SPHERE</h1>
-    <p>Sign up to connect with like-minded individuals and explore new opportunities.</p>
-    <form action="/signup" method="post">
-        <label for="username">Username:</label><br>
-        <input type="text" id="username" name="username" required><br><br>
-        
-        <label for="email">Email:</label><br>
-        <input type="email" id="email" name="email" required><br><br>
-        
-        <label for="password">Password:</label><br>
-        <input type="password" id="password" name="password" required><br><br>
-        
-        <input type="submit" value="Sign Up">
-    </form>
+
+  <!-- Decorative Background Blobs -->
+  <div class="blob blob-1" aria-hidden="true"></div>
+  <div class="blob blob-2" aria-hidden="true"></div>
+  <div class="blob blob-3" aria-hidden="true"></div>
+  <div class="blob blob-4" aria-hidden="true"></div>
+
+  <!-- Main Page Wrapper -->
+  <main class="auth-wrapper">
+
+    <article class="card">
+
+      <!-- Card Header -->
+      <header class="card-header">
+        <h1 class="logo">Connect<span>Sphere</span></h1>
+        <p class="tagline">Where students connect</p>
+      </header>
+
+      <!-- Signup Form -->
+      <section class="card-body">
+        <form action="#" method="POST" novalidate>
+
+          <fieldset>
+            <legend class="sr-only">Personal Information</legend>
+
+            <div class="form-group">
+              <label for="fullname">Full Name</label>
+              <input
+                type="text"
+                id="fullname"
+                name="fullname"
+                placeholder="e.g. John Doe"
+                autocomplete="name"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="department">Department</label>
+              <select id="department" name="department" required>
+                <option value="" disabled selected>Select your department</option>
+                <option value="cs">Computer Science</option>
+                <option value="ee">Electrical Engineering</option>
+                <option value="me">Mechanical Engineering</option>
+                <!-- Add more departments as needed -->
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="level">Level</label>
+              <select id="level" name="level" required>
+                <option value="" disabled selected>Select your level</option>
+                <option value="100">100 Level</option>
+                <option value="200">200 Level</option>
+                <option value="300">300 Level</option>
+                <option value="400">400 Level</option>
+                <option value="500">500 Level</option>
+              </select>
+            </div>
+
+          </fieldset>
+
+          <fieldset>
+            <legend class="sr-only">Account Credentials</legend>
+
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="e.g. johndoe@university.edu"
+                autocomplete="email"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="password">Password</label>
+              <input
+                type="password"
+                id="password"
+                name="password"
+                placeholder="Create a strong password"
+                autocomplete="new-password"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="confirm-password">Confirm Password</label>
+              <input
+                type="password"
+                id="confirm-password"
+                name="confirm-password"
+                placeholder="Repeat your password"
+                autocomplete="new-password"
+                required
+              />
+            </div>
+
+          </fieldset>
+
+          <button type="submit" class="btn-primary">Create Account</button>
+
+        </form>
+      </section>
+
+      <!-- Card Footer -->
+      <footer class="card-footer">
+        <p>Already have an account? <a href="login.html">Log in</a></p>
+      </footer>
+
+    </article>
+
+  </main>
+
 </body>
+
 </html>

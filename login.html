@@ -1,22 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CONNECT-SPHERE</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ConnectSphere — Log In</title>
+  <link rel="stylesheet" href="auth.css" />
 </head>
+
 <body>
-    <h1>Welcome to CONNECT-SPHERE</h1>
-    <p>Please log in to your account.</p>
-    <form action="/login" method="post">
-        <label for="username">Username:</label><br>
-        <input type="text" id="username" name="username" required><br><br>
 
-        <label for="password">Password:</label><br>
-        <input type="password" id="password" name="password" required><br><br>
+  <!-- Decorative Background Blobs -->
+  <div class="blob blob-1" aria-hidden="true"></div>
+  <div class="blob blob-2" aria-hidden="true"></div>
+  <div class="blob blob-3" aria-hidden="true"></div>
+  <div class="blob blob-4" aria-hidden="true"></div>
 
-        <input type="submit" value="Log In">
-    </form>
+  <!-- Main Page Wrapper -->
+  <main class="auth-wrapper">
+
+    <article class="card">
+
+      <!-- Card Header -->
+      <header class="card-header">
+        <h1 class="logo">Connect<span>Sphere</span></h1>
+        <p class="tagline">Welcome back 👋</p>
+      </header>
+
+      <!-- Login Form -->
+      <section class="card-body">
+        <form action="#" method="POST" novalidate>
+
+          <fieldset>
+            <legend class="sr-only">Login Credentials</legend>
+
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Enter your email"
+                autocomplete="email"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="password">Password</label>
+              <input
+                type="password"
+                id="password"
+                name="password"
+                placeholder="Enter your password"
+                autocomplete="current-password"
+                required
+              />
+            </div>
+
+          </fieldset>
+
+          <div class="forgot-password">
+            <a href="#">Forgot password?</a>
+          </div>
+
+          <button type="submit" class="btn-primary">Log In</button>
+
+        </form>
+      </section>
+
+      <!-- Card Footer -->
+      <footer class="card-footer">
+        <p>Don't have an account? <a href="signup.html">Sign up</a></p>
+      </footer>
+
+    </article>
+
+  </main>
+
 </body>
 
 </html>
