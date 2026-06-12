@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ConnectSphere — Communities</title>
+  <link rel="stylesheet" href="css/feed.css" />
+  <link rel="stylesheet" href="css/communities.css" />
+</head>
+
+<body>
+
+  <!-- Top Navigation (same as feed.html) -->
+  <header class="top-navbar">
+    <nav class="top-nav-inner">
+      <a href="feed.html" class="nav-logo">Connect<span>Sphere</span></a>
+
+      <div class="search-bar">
+        <span class="search-icon">🔍</span>
+        <input type="search" placeholder="Search communities..." aria-label="Search communities" />
+      </div>
+
+      <div class="nav-actions">
+        <button class="icon-btn" aria-label="Notifications">
+          🔔 <span class="badge">3</span>
+        </button>
+        <button class="icon-btn" aria-label="Messages">
+          💬 <span class="badge">5</span>
+        </button>
+        <a href="profile.html" class="avatar-btn" aria-label="My Profile">
+          <div class="avatar">JD</div>
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Main Layout -->
+  <div class="app-layout">
+
+    <!-- Left Sidebar (same as feed.html) -->
+    <aside class="sidebar-left">
+      <section class="mini-profile">
+        <div class="mini-avatar">JD</div>
+        <div class="mini-info">
+          <p class="mini-name">John Doe</p>
+          <p class="mini-meta">300L · Computer Science</p>
+        </div>
+      </section>
+
+      <nav class="sidebar-nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="feed.html" class="nav-item"><span class="nav-icon">🏠</span><span>Home</span></a></li>
+          <li><a href="communities.html" class="nav-item active"><span class="nav-icon">🏘️</span><span>Communities</span></a></li>
+          <li><a href="resources.html" class="nav-item"><span class="nav-icon">📚</span><span>Resources</span></a></li>
+          <li><a href="events.html" class="nav-item"><span class="nav-icon">📅</span><span>Events</span></a></li>
+          <li><a href="chat.html" class="nav-item"><span class="nav-icon">💬</span><span>Messages</span></a></li>
+          <li><a href="confessions.html" class="nav-item"><span class="nav-icon">🎭</span><span>Confessions</span></a></li>
+        </ul>
+      </nav>
+
+      <section class="my-spaces">
+        <h4 class="sidebar-section-title">My Spaces</h4>
+        <ul>
+          <li><a href="#" class="space-item"><span class="space-dot" style="background:#6C63FF"></span>300 Level</a></li>
+          <li><a href="#" class="space-item"><span class="space-dot" style="background:#43CEED"></span>Computer Science</a></li>
+          <li><a href="#" class="space-item"><span class="space-dot" style="background:#FF6584"></span>Tech Enthusiasts</a></li>
+        </ul>
+      </section>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="communities-main">
+
+      <!-- Page Header -->
+      <header class="page-header">
+        <h1>Communities</h1>
+        <p>Your spaces and places to discover</p>
+      </header>
+
+      <!-- My Spaces Section -->
+      <section class="community-section">
+        <h2 class="section-heading">My Spaces</h2>
+        <div class="community-grid">
+
+          <article class="community-card joined">
+            <div class="community-banner" style="background:linear-gradient(135deg,#6C63FF,#43CEED)"></div>
+            <div class="community-info">
+              <div class="community-icon" style="background:#6C63FF">3L</div>
+              <div class="community-text">
+                <h3>300 Level</h3>
+                <p class="community-meta">1.2k members</p>
+              </div>
+            </div>
+            <p class="community-desc">Official space for all 300 level students — announcements, resources and discussions.</p>
+            <button class="btn-secondary community-btn">View</button>
+          </article>
+
+          <article class="community-card joined">
+            <div class="community-banner" style="background:linear-gradient(135deg,#43CEED,#6C63FF)"></div>
+            <div class="community-info">
+              <div class="community-icon" style="background:#43CEED">CS</div>
+              <div class="community-text">
+                <h3>Computer Science</h3>
+                <p class="community-meta">2.4k members</p>
+              </div>
+            </div>
+            <p class="community-desc">Department-wide space for all CS students — news, events and academic talk.</p>
+            <button class="btn-secondary community-btn">View</button>
+          </article>
+
+          <article class="community-card joined">
+            <div class="community-banner" style="background:linear-gradient(135deg,#FF6584,#6C63FF)"></div>
+            <div class="community-info">
+              <div class="community-icon" style="background:#FF6584">TE</div>
+              <div class="community-text">
+                <h3>Tech Enthusiasts</h3>
+                <p class="community-meta">540 members</p>
+              </div>
+            </div>
+            <p class="community-desc">For students who love coding, gadgets, and all things tech.</p>
+            <button class="btn-secondary community-btn">View</button>
+          </article>
+
+        </div>
+      </section>
+
+      <!-- Discover Section -->
+      <section class="community-section">
+        <h2 class="section-heading">Discover Communities</h2>
+        <div class="community-grid">
+
+          <article class="community-card">
+            <div class="community-banner" style="background:linear-gradient(135deg,#f5a623,#FF6584)"></div>
+            <div class="community-info">
+              <div class="community-icon" style="background:#f5a623">FY</div>
+              <div class="community-text">
+                <h3>Final Year Students</h3>
+                <p class="community-meta">890 members</p>
+              </div>
+            </div>
+            <p class="community-desc">Project tips, internships, and final-year survival guides.</p>
+            <button class="btn-primary community-btn">Join</button>
+          </article>
+
+          <article class="community-card">
+            <div class="community-banner" style="background:linear-gradient(135deg,#6C63FF,#FF6584)"></div>
+            <div class="community-info">
+              <div class="community-icon" style="background:#6C63FF">DC</div>
+              <div class="community-text">
+                <h3>Dev Club</h3>
+                <p class="community-meta">320 members</p>
+              </div>
+            </div>
+            <p class="community-desc">Build projects, join hackathons, and grow your dev skills together.</p>
+            <button class="btn-primary community-btn">Join</button>
+          </article>
+
+          <article class="community-card">
+            <div class="community-banner" style="background:linear-gradient(135deg,#43CEED,#FF6584)"></div>
+            <div class="community-info">
+              <div class="community-icon" style="background:#43CEED">CM</div>
+              <div class="community-text">
+                <h3>Campus Memes 😂</h3>
+                <p class="community-meta">3.1k members</p>
+              </div>
+            </div>
+            <p class="community-desc">The funniest, most relatable campus content. Enter at your own risk.</p>
+            <button class="btn-primary community-btn">Join</button>
+          </article>
+
+          <article class="community-card">
+            <div class="community-banner" style="background:linear-gradient(135deg,#FF6584,#43CEED)"></div>
+            <div class="community-info">
+              <div class="community-icon" style="background:#FF6584">EE</div>
+              <div class="community-text">
+                <h3>Electrical Engineering</h3>
+                <p class="community-meta">1.8k members</p>
+              </div>
+            </div>
+            <p class="community-desc">All things EE — circuits, projects, past questions and more.</p>
+            <button class="btn-primary community-btn">Join</button>
+          </article>
+
+          <article class="community-card">
+            <div class="community-banner" style="background:linear-gradient(135deg,#6C63FF,#43CEED)"></div>
+            <div class="community-info">
+              <div class="community-icon" style="background:#6C63FF">200</div>
+              <div class="community-text">
+                <h3>200 Level</h3>
+                <p class="community-meta">1.5k members</p>
+              </div>
+            </div>
+            <p class="community-desc">Space for all 200 level students across departments.</p>
+            <button class="btn-primary community-btn">Join</button>
+          </article>
+
+          <article class="community-card">
+            <div class="community-banner" style="background:linear-gradient(135deg,#f5a623,#6C63FF)"></div>
+            <div class="community-info">
+              <div class="community-icon" style="background:#f5a623">SP</div>
+              <div class="community-text">
+                <h3>Sports & Fitness</h3>
+                <p class="community-meta">670 members</p>
+              </div>
+            </div>
+            <p class="community-desc">Football, gym tips, and campus sports updates.</p>
+            <button class="btn-primary community-btn">Join</button>
+          </article>
+
+        </div>
+      </section>
+
+    </main>
+
+  </div>
+
+</body>
+</html>
