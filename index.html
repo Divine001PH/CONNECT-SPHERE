@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ConnectSphere — Where Students Connect</title>
+  <link rel="stylesheet" href="css folder/landing.css" />
+</head>
+
+<body>
+<header class="navbar">
+  <nav>
+    <!-- Logo -->
+    <a href="index.html" class="nav-logo">
+      Connect<span>Sphere</span>
+    </a>
+
+    <!-- Hamburger Button -->
+    <button class="hamburger" aria-label="Toggle menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <!-- Nav Links -->
+    <ul class="nav-links">
+      <li><a href="#features">Features</a></li>
+      <li><a href="#how-it-works">How it Works</a></li>
+      <li><a href="login.html">Log In</a></li>
+      <li><a href="signup.html" class="btn-nav">Get Started</a></li>
+    </ul>
+  </nav>
+</header>
+<main>
+  <section id="hero">
+    <div class="hero-content">
+      <h1>Your Campus.<br/>Your <span>Community.</span></h1>
+      <p>
+        ConnectSphere brings students together —
+        chat, share ideas, discover communities,
+        and make your university life more connected.
+      </p>
+      <div class="hero-buttons">
+        <a href="signup.html" class="btn-primary">Get Started Free</a>
+        <a href="#features" class="btn-secondary">See Features</a>
+      </div>
+    </div>
+    <div class="hero-illustration" aria-hidden="true">
+      <!-- You can place an SVG or image here later -->
+      <div class="illustration-placeholder"></div>
+    </div>
+  </section>
+  <section id="features">
+    <h2>Everything you need, <span>in one place</span></h2>
+    <p class="section-subtitle">
+      Built for students, by students
+    </p>
+
+    <div class="features-grid">
+
+      <article class="feature-card">
+        <div class="feature-icon">💬</div>
+        <h3>Real-time Chat</h3>
+        <p>DM classmates or create group chats
+           for study sessions and projects.</p>
+      </article>
+
+      <article class="feature-card">
+        <div class="feature-icon">🏘️</div>
+        <h3>Communities</h3>
+        <p>Join spaces for your level, department,
+           clubs and interests.</p>
+      </article>
+
+      <article class="feature-card">
+        <div class="feature-icon">📢</div>
+        <h3>Announcements</h3>
+        <p>Never miss important updates from
+           your department or reps.</p>
+      </article>
+
+      <article class="feature-card">
+        <div class="feature-icon">📚</div>
+        <h3>Resource Sharing</h3>
+        <p>Share and access notes, past questions
+           and study materials easily.</p>
+      </article>
+
+      <article class="feature-card">
+        <div class="feature-icon">🎭</div>
+        <h3>Anonymous Board</h3>
+        <p>Share confessions, shoutouts and
+           honest thoughts — safely and freely.</p>
+      </article>
+
+      <article class="feature-card">
+        <div class="feature-icon">🎉</div>
+        <h3>Fun & Challenges</h3>
+        <p>Daily prompts, polls, leaderboards
+           and campus challenges to keep it fun.</p>
+      </article>
+
+    </div>
+  </section>
+  <section id="how-it-works">
+    <h2>Get started in <span>3 simple steps</span></h2>
+
+    <div class="steps-wrapper">
+
+      <article class="step">
+        <div class="step-number">01</div>
+        <h3>Create Your Account</h3>
+        <p>Sign up with your university email,
+           pick your department and level.</p>
+      </article>
+
+      <div class="step-divider" aria-hidden="true">→</div>
+
+      <article class="step">
+        <div class="step-number">02</div>
+        <h3>Join Your Space</h3>
+        <p>You're automatically added to your
+           department. Explore and join more.</p>
+      </article>
+
+      <div class="step-divider" aria-hidden="true">→</div>
+
+      <article class="step">
+        <div class="step-number">03</div>
+        <h3>Start Connecting</h3>
+        <p>Post, chat, share resources and
+           enjoy your campus community.</p>
+      </article>
+
+    </div>
+  </section>
+  <section id="cta">
+    <div class="cta-content">
+      <h2>Ready to join your people? 🚀</h2>
+      <p>Thousands of students are already connecting.
+         Don't be left out.</p>
+      <a href="signup.html" class="btn-primary">
+        Join Now — It's Free
+      </a>
+    </div>
+  </section>
+</main>
+<footer id="footer">
+  <div class="footer-content">
+
+    <div class="footer-brand">
+      <p class="logo">Connect<span>Sphere</span></p>
+      <p class="footer-tagline">Where students connect</p>
+    </div>
+
+    <nav class="footer-links" aria-label="Footer navigation">
+      <ul>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#how-it-works">How it Works</a></li>
+        <li><a href="signup.html">Sign Up</a></li>
+        <li><a href="login.html">Log In</a></li>
+      </ul>
+    </nav>
+
+  </div>
+
+   <div class="footer-bottom">
+    <p>&copy; 2025 ConnectSphere. Built with ❤️ by students.</p>
+  </div>
+</footer>
+
+<script>
+  const hamburger = document.querySelector('.hamburger');
+  const navLinks = document.querySelector('.nav-links');
+
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('active');
+    navLinks.classList.toggle('open');
+  });
+</script>
+
+</body>
+</html>

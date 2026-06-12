@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ConnectSphere — Home</title>
+  <link rel="stylesheet" href="css folder/feed.css" />
+</head>
+<body>
+
+  <!-- Top Navigation -->
+  <header class="top-navbar">
+    <nav class="top-nav-inner">
+
+      <!-- Logo -->
+      <a href="feed.html" class="nav-logo">
+        Connect<span>Sphere</span>
+      </a>
+
+      <!-- Search Bar -->
+      <div class="search-bar">
+        <span class="search-icon">🔍</span>
+        <input
+          type="search"
+          placeholder="Search people, communities, posts..."
+          aria-label="Search ConnectSphere"
+        />
+      </div>
+
+      <!-- Right Icons -->
+      <div class="nav-actions">
+        <button class="icon-btn" aria-label="Notifications">
+          🔔
+          <span class="badge">3</span>
+        </button>
+        <button class="icon-btn" aria-label="Messages">
+          💬
+          <span class="badge">5</span>
+        </button>
+        <a href="profile.html" class="avatar-btn" aria-label="My Profile">
+          <div class="avatar">JD</div>
+        </a>
+      </div>
+
+    </nav>
+  </header>
+  <!-- Main App Layout -->
+  <div class="app-layout">
+    <!-- Left Sidebar -->
+    <aside class="sidebar-left">
+
+      <!-- Mini Profile -->
+      <section class="mini-profile">
+        <div class="mini-avatar">JD</div>
+        <div class="mini-info">
+          <p class="mini-name">John Doe</p>
+          <p class="mini-meta">300L · Computer Science</p>
+        </div>
+      </section>
+
+      <!-- Main Navigation -->
+      <nav class="sidebar-nav" aria-label="Main navigation">
+        <ul>
+          <li>
+            <a href="feed.html" class="nav-item active">
+              <span class="nav-icon">🏠</span>
+              <span>Home</span>
+            </a>
+          </li>
+          <li>
+            <a href="communities.html" class="nav-item">
+              <span class="nav-icon">🏘️</span>
+              <span>Communities</span>
+            </a>
+          </li>
+          <li>
+            <a href="resources.html" class="nav-item">
+              <span class="nav-icon">📚</span>
+              <span>Resources</span>
+            </a>
+          </li>
+          <li>
+            <a href="events.html" class="nav-item">
+              <span class="nav-icon">📅</span>
+              <span>Events</span>
+            </a>
+          </li>
+          <li>
+            <a href="chat.html" class="nav-item">
+              <span class="nav-icon">💬</span>
+              <span>Messages</span>
+            </a>
+          </li>
+          <li>
+            <a href="confessions.html" class="nav-item">
+              <span class="nav-icon">🎭</span>
+              <span>Confessions</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- My Spaces -->
+      <section class="my-spaces">
+        <h4 class="sidebar-section-title">My Spaces</h4>
+        <ul>
+          <li>
+            <a href="#" class="space-item">
+              <span class="space-dot" style="background:#6C63FF"></span>
+              300 Level
+            </a>
+          </li>
+          <li>
+            <a href="#" class="space-item">
+              <span class="space-dot" style="background:#43CEED"></span>
+              Computer Science
+            </a>
+          </li>
+          <li>
+            <a href="#" class="space-item">
+              <span class="space-dot" style="background:#FF6584"></span>
+              Tech Enthusiasts
+            </a>
+          </li>
+        </ul>
+      </section>
+
+    </aside>
+    <!-- Middle Feed -->
+    <main class="feed">
+
+      <!-- Create Post Box -->
+      <section class="create-post">
+        <div class="create-post-inner">
+          <div class="avatar sm">JD</div>
+          <button class="create-post-input" aria-label="Create a post">
+            What's on your mind?
+          </button>
+        </div>
+        <div class="create-post-actions">
+          <button class="post-action-btn">📷 Photo</button>
+          <button class="post-action-btn">📎 File</button>
+          <button class="post-action-btn">📊 Poll</button>
+          <button class="post-action-btn">🎭 Anonymous</button>
+        </div>
+      </section>
+
+      <!-- Post Card 1 -->
+      <article class="post-card">
+        <header class="post-header">
+          <div class="avatar sm">AM</div>
+          <div class="post-meta">
+            <p class="post-author">Ada Mensah</p>
+            <p class="post-info">300L · Computer Science · 2h ago</p>
+          </div>
+          <button class="post-options" aria-label="Post options">⋯</button>
+        </header>
+
+        <section class="post-body">
+          <p>Just found the best resource for our Data Structures exam 🎉
+             Sharing in the Resources space — go check it out!</p>
+        </section>
+
+        <footer class="post-footer">
+          <button class="reaction-btn">❤️ 24</button>
+          <button class="reaction-btn">💬 8 Comments</button>
+          <button class="reaction-btn">🔁 Share</button>
+          <button class="reaction-btn">🔖 Save</button>
+        </footer>
+      </article>
+
+      <!-- Post Card 2 -->
+      <article class="post-card">
+        <header class="post-header">
+          <div class="avatar sm">KO</div>
+          <div class="post-meta">
+            <p class="post-author">Kofi Owusu</p>
+            <p class="post-info">200L · Computer Science · 5h ago</p>
+          </div>
+          <button class="post-options" aria-label="Post options">⋯</button>
+        </header>
+
+        <section class="post-body">
+          <p>Anyone forming a study group for the upcoming
+             Software Engineering test? Drop a comment! 👇</p>
+        </section>
+
+        <footer class="post-footer">
+          <button class="reaction-btn">❤️ 12</button>
+          <button class="reaction-btn">💬 15 Comments</button>
+          <button class="reaction-btn">🔁 Share</button>
+          <button class="reaction-btn">🔖 Save</button>
+        </footer>
+      </article>
+
+    </main>
+    <!-- Right Widgets -->
+    <aside class="sidebar-right">
+
+      <!-- Trending Topics -->
+      <section class="widget">
+        <h4 class="widget-title">🔥 Trending</h4>
+        <ul class="trending-list">
+          <li><a href="#">#DataStructures</a><span>42 posts</span></li>
+          <li><a href="#">#SoftwareEng</a><span>28 posts</span></li>
+          <li><a href="#">#CampusLife</a><span>19 posts</span></li>
+          <li><a href="#">#StudyGroup</a><span>15 posts</span></li>
+        </ul>
+      </section>
+
+      <!-- Suggested Communities -->
+      <section class="widget">
+        <h4 class="widget-title">🏘️ Suggested Spaces</h4>
+        <ul class="suggested-list">
+          <li class="suggested-item">
+            <span class="space-dot" style="background:#f5a623"></span>
+            <span class="suggested-name">Final Year Students</span>
+            <button class="btn-join">Join</button>
+          </li>
+          <li class="suggested-item">
+            <span class="space-dot" style="background:#6C63FF"></span>
+            <span class="suggested-name">Dev Club</span>
+            <button class="btn-join">Join</button>
+          </li>
+          <li class="suggested-item">
+            <span class="space-dot" style="background:#43CEED"></span>
+            <span class="suggested-name">Campus Memes 😂</span>
+            <button class="btn-join">Join</button>
+          </li>
+        </ul>
+      </section>
+
+      <!-- Upcoming Events -->
+      <section class="widget">
+        <h4 class="widget-title">📅 Upcoming Events</h4>
+        <ul class="events-list">
+          <li class="event-item">
+            <p class="event-name">Dept. Seminar</p>
+            <p class="event-date">Mon, Jan 20 · 10:00 AM</p>
+          </li>
+          <li class="event-item">
+            <p class="event-name">Study Jam Session</p>
+            <p class="event-date">Wed, Jan 22 · 3:00 PM</p>
+          </li>
+        </ul>
+      </section>
+
+    </aside>
+
+  </div><!-- end .app-layout -->
+
+</body>
+</html>
