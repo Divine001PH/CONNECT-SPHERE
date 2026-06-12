@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ConnectSphere — Computer Science</title>
+  <link rel="stylesheet" href="css/feed.css" />
+  <link rel="stylesheet" href="css/communities.css" />
+  <link rel="stylesheet" href="css/communitypage.css" />
+</head>
+
+<body>
+
+  <!-- Top Navigation -->
+  <header class="top-navbar">
+    <nav class="top-nav-inner">
+      <a href="feed.html" class="nav-logo">Connect<span>Sphere</span></a>
+
+      <div class="search-bar">
+        <span class="search-icon">🔍</span>
+        <input type="search" placeholder="Search..." aria-label="Search" />
+      </div>
+
+      <div class="nav-actions">
+        <button class="icon-btn" aria-label="Notifications">
+          🔔 <span class="badge">3</span>
+        </button>
+        <button class="icon-btn" aria-label="Messages">
+          💬 <span class="badge">5</span>
+        </button>
+        <a href="profile.html" class="avatar-btn" aria-label="My Profile">
+          <div class="avatar">JD</div>
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Main Layout -->
+  <div class="app-layout">
+
+    <!-- Left Sidebar -->
+    <aside class="sidebar-left">
+      <section class="mini-profile">
+        <div class="mini-avatar">JD</div>
+        <div class="mini-info">
+          <p class="mini-name">John Doe</p>
+          <p class="mini-meta">300L · Computer Science</p>
+        </div>
+      </section>
+
+      <nav class="sidebar-nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="feed.html" class="nav-item"><span class="nav-icon">🏠</span><span>Home</span></a></li>
+          <li><a href="communities.html" class="nav-item active"><span class="nav-icon">🏘️</span><span>Communities</span></a></li>
+          <li><a href="resources.html" class="nav-item"><span class="nav-icon">📚</span><span>Resources</span></a></li>
+          <li><a href="events.html" class="nav-item"><span class="nav-icon">📅</span><span>Events</span></a></li>
+          <li><a href="chat.html" class="nav-item"><span class="nav-icon">💬</span><span>Messages</span></a></li>
+          <li><a href="confessions.html" class="nav-item"><span class="nav-icon">🎭</span><span>Confessions</span></a></li>
+        </ul>
+      </nav>
+
+      <section class="my-spaces">
+        <h4 class="sidebar-section-title">My Spaces</h4>
+        <ul>
+          <li><a href="#" class="space-item"><span class="space-dot" style="background:#6C63FF"></span>300 Level</a></li>
+          <li><a href="community-page.html" class="space-item"><span class="space-dot" style="background:#43CEED"></span>Computer Science</a></li>
+          <li><a href="#" class="space-item"><span class="space-dot" style="background:#FF6584"></span>Tech Enthusiasts</a></li>
+        </ul>
+      </section>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="community-page-main">
+
+      <!-- Community Header / Banner -->
+      <section class="community-header">
+        <div class="community-cover" style="background:linear-gradient(135deg,#43CEED,#6C63FF)"></div>
+
+        <div class="community-header-content">
+          <div class="community-header-icon" style="background:#43CEED">CS</div>
+
+          <div class="community-header-text">
+            <h1>Computer Science</h1>
+            <p class="community-header-meta">2.4k members · 184 online</p>
+            <p class="community-header-desc">
+              Department-wide space for all Computer Science students —
+              news, events, resources and academic discussions.
+            </p>
+          </div>
+
+          <button class="btn-secondary community-header-btn">Joined ✓</button>
+        </div>
+
+        <!-- Tabs -->
+        <nav class="community-tabs" aria-label="Community sections">
+          <a href="#" class="tab-item active">Posts</a>
+          <a href="#" class="tab-item">About</a>
+          <a href="#" class="tab-item">Members</a>
+        </nav>
+      </section>
+
+      <!-- Content Grid -->
+      <div class="community-content-grid">
+
+        <!-- Posts Feed -->
+        <section class="community-posts">
+
+          <!-- Create Post -->
+          <section class="create-post">
+            <div class="create-post-inner">
+              <div class="avatar sm">JD</div>
+              <button class="create-post-input" aria-label="Create a post in Computer Science">
+                Share something with Computer Science...
+              </button>
+            </div>
+            <div class="create-post-actions">
+              <button class="post-action-btn">📷 Photo</button>
+              <button class="post-action-btn">📎 File</button>
+              <button class="post-action-btn">📊 Poll</button>
+              <button class="post-action-btn">🎭 Anonymous</button>
+            </div>
+          </section>
+
+          <!-- Pinned Post -->
+          <article class="post-card pinned">
+            <header class="post-header">
+              <div class="avatar sm">AD</div>
+              <div class="post-meta">
+                <p class="post-author">Admin · Dept Rep</p>
+                <p class="post-info">📌 Pinned · 1d ago</p>
+              </div>
+              <button class="post-options" aria-label="Post options">⋯</button>
+            </header>
+            <section class="post-body">
+              <p>Welcome to the Computer Science community! 🎉 Please read the
+                 pinned rules before posting. Use this space to share resources,
+                 ask questions, and stay updated on department announcements.</p>
+            </section>
+            <footer class="post-footer">
+              <button class="reaction-btn">❤️ 56</button>
+              <button class="reaction-btn">💬 12 Comments</button>
+              <button class="reaction-btn">🔁 Share</button>
+              <button class="reaction-btn">🔖 Save</button>
+            </footer>
+          </article>
+
+          <!-- Post Card 1 -->
+          <article class="post-card">
+            <header class="post-header">
+              <div class="avatar sm">AM</div>
+              <div class="post-meta">
+                <p class="post-author">Ada Mensah</p>
+                <p class="post-info">300L · 2h ago</p>
+              </div>
+              <button class="post-options" aria-label="Post options">⋯</button>
+            </header>
+            <section class="post-body">
+              <p>Just found the best resource for our Data Structures exam 🎉
+                 Sharing in the Resources space — go check it out!</p>
+            </section>
+            <footer class="post-footer">
+              <button class="reaction-btn">❤️ 24</button>
+              <button class="reaction-btn">💬 8 Comments</button>
+              <button class="reaction-btn">🔁 Share</button>
+              <button class="reaction-btn">🔖 Save</button>
+            </footer>
+          </article>
+
+          <!-- Post Card 2 -->
+          <article class="post-card">
+            <header class="post-header">
+              <div class="avatar sm">KO</div>
+              <div class="post-meta">
+                <p class="post-author">Kofi Owusu</p>
+                <p class="post-info">200L · 5h ago</p>
+              </div>
+              <button class="post-options" aria-label="Post options">⋯</button>
+            </header>
+            <section class="post-body">
+              <p>Anyone forming a study group for the upcoming
+                 Software Engineering test? Drop a comment! 👇</p>
+            </section>
+            <footer class="post-footer">
+              <button class="reaction-btn">❤️ 12</button>
+              <button class="reaction-btn">💬 15 Comments</button>
+              <button class="reaction-btn">🔁 Share</button>
+              <button class="reaction-btn">🔖 Save</button>
+            </footer>
+          </article>
+
+        </section>
+
+        <!-- About / Sidebar -->
+        <aside class="community-sidebar">
+
+          <!-- About Widget -->
+          <section class="widget">
+            <h4 class="widget-title">About</h4>
+            <p class="about-text">
+              A space for Computer Science students to connect, share resources,
+              discuss coursework, and stay updated on department news.
+            </p>
+            <ul class="about-meta-list">
+              <li><span>📅 Created</span><span>Sept 2024</span></li>
+              <li><span>👥 Members</span><span>2,431</span></li>
+              <li><span>🌍 Visibility</span><span>Public</span></li>
+            </ul>
+          </section>
+
+          <!-- Rules Widget -->
+          <section class="widget">
+            <h4 class="widget-title">Community Rules</h4>
+            <ol class="rules-list">
+              <li>Be respectful to all members</li>
+              <li>No spam or self-promotion</li>
+              <li>Keep posts relevant to CS/academics</li>
+              <li>Use the Resources space for files</li>
+              <li>Report issues to moderators</li>
+            </ol>
+          </section>
+
+          <!-- Admins / Mods -->
+          <section class="widget">
+            <h4 class="widget-title">Admins & Moderators</h4>
+            <ul class="member-list">
+              <li class="member-item">
+                <div class="avatar sm">AD</div>
+                <div class="member-text">
+                  <p class="member-name">Admin Account</p>
+                  <p class="member-role">Administrator</p>
+                </div>
+              </li>
+              <li class="member-item">
+                <div class="avatar sm">CR</div>
+                <div class="member-text">
+                  <p class="member-name">CS Dept Rep</p>
+                  <p class="member-role">Moderator</p>
+                </div>
+              </li>
+            </ul>
+          </section>
+
+          <!-- Member Avatars -->
+          <section class="widget">
+            <h4 class="widget-title">Members</h4>
+            <div class="member-avatars">
+              <div class="avatar sm">AM</div>
+              <div class="avatar sm">KO</div>
+              <div class="avatar sm">JD</div>
+              <div class="avatar sm">TF</div>
+              <div class="avatar sm">PL</div>
+              <div class="avatar-more">+2.4k</div>
+            </div>
+          </section>
+
+        </aside>
+
+      </div>
+
+    </main>
+
+  </div>
+
+</body>
+</html>
