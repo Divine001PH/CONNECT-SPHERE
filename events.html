@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ConnectSphere — Events</title>
+  <link rel="stylesheet" href="css folder/feed.css" />
+  <link rel="stylesheet" href="css folder/events.css" />
+</head>
+
+<body>
+
+  <!-- Top Navigation -->
+  <header class="top-navbar">
+    <nav class="top-nav-inner">
+      <a href="feed.html" class="nav-logo">Connect<span>Sphere</span></a>
+      <div class="search-bar">
+        <span class="search-icon">🔍</span>
+        <input type="search" placeholder="Search events..." aria-label="Search events" />
+      </div>
+      <div class="nav-actions">
+        <button class="icon-btn" aria-label="Notifications">🔔 <span class="badge">3</span></button>
+        <button class="icon-btn" aria-label="Messages">💬 <span class="badge">5</span></button>
+        <a href="profile.html" class="avatar-btn" aria-label="My Profile">
+          <div class="avatar">JD</div>
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <div class="app-layout">
+
+    <!-- Left Sidebar -->
+    <aside class="sidebar-left">
+      <section class="mini-profile">
+        <div class="mini-avatar">JD</div>
+        <div class="mini-info">
+          <p class="mini-name">John Doe</p>
+          <p class="mini-meta">300L · Computer Science</p>
+        </div>
+      </section>
+
+      <nav class="sidebar-nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="feed.html" class="nav-item"><span class="nav-icon">🏠</span><span>Home</span></a></li>
+          <li><a href="communities.html" class="nav-item"><span class="nav-icon">🏘️</span><span>Communities</span></a></li>
+          <li><a href="resources.html" class="nav-item"><span class="nav-icon">📚</span><span>Resources</span></a></li>
+          <li><a href="events.html" class="nav-item active"><span class="nav-icon">📅</span><span>Events</span></a></li>
+          <li><a href="chat.html" class="nav-item"><span class="nav-icon">💬</span><span>Messages</span></a></li>
+          <li><a href="confessions.html" class="nav-item"><span class="nav-icon">🎭</span><span>Confessions</span></a></li>
+        </ul>
+      </nav>
+
+      <section class="my-spaces">
+        <h4 class="sidebar-section-title">My Spaces</h4>
+        <ul>
+          <li><a href="#" class="space-item"><span class="space-dot" style="background:#6C63FF"></span>300 Level</a></li>
+          <li><a href="community-page.html" class="space-item"><span class="space-dot" style="background:#43CEED"></span>Computer Science</a></li>
+          <li><a href="#" class="space-item"><span class="space-dot" style="background:#FF6584"></span>Tech Enthusiasts</a></li>
+        </ul>
+      </section>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="events-main">
+
+      <!-- Page Header -->
+      <div class="events-page-header">
+        <div>
+          <h1>Events</h1>
+          <p>Upcoming campus events, workshops and hangouts</p>
+        </div>
+        <button class="btn-primary create-event-btn" id="create-event-btn">➕ Create Event</button>
+      </div>
+
+      <!-- Filter Bar -->
+      <div class="events-filter-bar">
+        <div class="filter-tabs" id="event-filter-tabs">
+          <button class="filter-tab active" data-filter="all">All</button>
+          <button class="filter-tab" data-filter="academic">🎓 Academic</button>
+          <button class="filter-tab" data-filter="social">🎉 Social</button>
+          <button class="filter-tab" data-filter="tech">💻 Tech</button>
+          <button class="filter-tab" data-filter="sports">⚽ Sports</button>
+        </div>
+        <div class="view-toggle">
+          <button class="view-btn active" id="view-grid" aria-label="Grid view">⊞</button>
+          <button class="view-btn" id="view-list" aria-label="List view">☰</button>
+        </div>
+      </div>
+
+      <!-- Events Content -->
+      <div class="events-content">
+
+        <!-- Events Grid -->
+        <section class="events-grid" id="events-grid">
+
+          <!-- Featured Event -->
+          <article class="event-card featured" data-category="tech">
+            <div class="event-banner" style="background: linear-gradient(135deg,#6C63FF,#43CEED)">
+              <span class="event-category-badge tech">💻 Tech</span>
+              <span class="event-featured-badge">⭐ Featured</span>
+            </div>
+            <div class="event-card-body">
+              <div class="event-date-block">
+                <span class="event-day">24</span>
+                <span class="event-month">JUN</span>
+              </div>
+              <div class="event-info">
+                <h3>Annual Hackathon 2025</h3>
+                <p class="event-meta">📍 ICT Building · 9:00 AM – 6:00 PM</p>
+                <p class="event-desc">24-hour coding challenge open to all students. Form teams of 2–4 and build something amazing. Prizes worth ₦500,000 up for grabs!</p>
+                <div class="event-footer">
+                  <div class="event-attendees">
+                    <div class="attendee-avatars">
+                      <div class="av-sm">AM</div>
+                      <div class="av-sm">KO</div>
+                      <div class="av-sm">TF</div>
+                    </div>
+                    <span class="attendee-count">+142 attending</span>
+                  </div>
+                  <button class="btn-primary event-rsvp-btn">RSVP</button>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Event Card 2 -->
+          <article class="event-card" data-category="academic">
+            <div class="event-banner" style="background: linear-gradient(135deg,#43CEED,#6C63FF)">
+              <span class="event-category-badge academic">🎓 Academic</span>
+            </div>
+            <div class="event-card-body">
+              <div class="event-date-block">
+                <span class="event-day">26</span>
+                <span class="event-month">JUN</span>
+              </div>
+              <div class="event-info">
+                <h3>CS Dept. Exam Prep Seminar</h3>
+                <p class="event-meta">📍 Lecture Hall 3 · 2:00 PM – 5:00 PM</p>
+                <p class="event-desc">Join lecturers and senior students for a guided exam prep session covering Data Structures and Algorithms.</p>
+                <div class="event-footer">
+                  <div class="event-attendees">
+                    <div class="attendee-avatars">
+                      <div class="av-sm">PL</div>
+                      <div class="av-sm">NN</div>
+                    </div>
+                    <span class="attendee-count">+78 attending</span>
+                  </div>
+                  <button class="btn-primary event-rsvp-btn">RSVP</button>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Event Card 3 -->
+          <article class="event-card" data-category="social">
+            <div class="event-banner" style="background: linear-gradient(135deg,#FF6584,#f5a623)">
+              <span class="event-category-badge social">🎉 Social</span>
+            </div>
+            <div class="event-card-body">
+              <div class="event-date-block">
+                <span class="event-day">28</span>
+                <span class="event-month">JUN</span>
+              </div>
+              <div class="event-info">
+                <h3>End of Semester Hangout</h3>
+                <p class="event-meta">📍 Campus Lawn · 4:00 PM – 8:00 PM</p>
+                <p class="event-desc">Celebrate the end of the semester with music, games and food. Everyone is welcome!</p>
+                <div class="event-footer">
+                  <div class="event-attendees">
+                    <div class="attendee-avatars">
+                      <div class="av-sm">AM</div>
+                      <div class="av-sm">JD</div>
+                      <div class="av-sm">KO</div>
+                    </div>
+                    <span class="attendee-count">+230 attending</span>
+                  </div>
+                  <button class="btn-secondary event-rsvp-btn">Going ✓</button>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Event Card 4 -->
+          <article class="event-card" data-category="tech">
+            <div class="event-banner" style="background: linear-gradient(135deg,#6C63FF,#FF6584)">
+              <span class="event-category-badge tech">💻 Tech</span>
+            </div>
+            <div class="event-card-body">
+              <div class="event-date-block">
+                <span class="event-day">02</span>
+                <span class="event-month">JUL</span>
+              </div>
+              <div class="event-info">
+                <h3>Web Dev Workshop — React Basics</h3>
+                <p class="event-meta">📍 Computer Lab 2 · 10:00 AM – 1:00 PM</p>
+                <p class="event-desc">Hands-on beginner workshop on React. Bring your laptop and leave with your first React app running.</p>
+                <div class="event-footer">
+                  <div class="event-attendees">
+                    <div class="attendee-avatars">
+                      <div class="av-sm">EB</div>
+                      <div class="av-sm">TF</div>
+                    </div>
+                    <span class="attendee-count">+45 attending</span>
+                  </div>
+                  <button class="btn-primary event-rsvp-btn">RSVP</button>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Event Card 5 -->
+          <article class="event-card" data-category="sports">
+            <div class="event-banner" style="background: linear-gradient(135deg,#43e97b,#43CEED)">
+              <span class="event-category-badge sports">⚽ Sports</span>
+            </div>
+            <div class="event-card-body">
+              <div class="event-date-block">
+                <span class="event-day">05</span>
+                <span class="event-month">JUL</span>
+              </div>
+              <div class="event-info">
+                <h3>Inter-Department Football Finals</h3>
+                <p class="event-meta">📍 University Pitch · 3:00 PM – 6:00 PM</p>
+                <p class="event-desc">CS vs EEE in the grand finals! Come cheer your department to glory. Free entry for all students.</p>
+                <div class="event-footer">
+                  <div class="event-attendees">
+                    <div class="attendee-avatars">
+                      <div class="av-sm">KO</div>
+                      <div class="av-sm">NN</div>
+                      <div class="av-sm">PL</div>
+                    </div>
+                    <span class="attendee-count">+310 attending</span>
+                  </div>
+                  <button class="btn-primary event-rsvp-btn">RSVP</button>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Event Card 6 -->
+          <article class="event-card" data-category="academic">
+            <div class="event-banner" style="background: linear-gradient(135deg,#f5a623,#FF6584)">
+              <span class="event-category-badge academic">🎓 Academic</span>
+            </div>
+            <div class="event-card-body">
+              <div class="event-date-block">
+                <span class="event-day">10</span>
+                <span class="event-month">JUL</span>
+              </div>
+              <div class="event-info">
+                <h3>Final Year Project Defence Day</h3>
+                <p class="event-meta">📍 Engineering Auditorium · 8:00 AM – 4:00 PM</p>
+                <p class="event-desc">Final year students present their projects to the panel. Open to all students for observation and support.</p>
+                <div class="event-footer">
+                  <div class="event-attendees">
+                    <div class="attendee-avatars">
+                      <div class="av-sm">AM</div>
+                      <div class="av-sm">EB</div>
+                    </div>
+                    <span class="attendee-count">+95 attending</span>
+                  </div>
+                  <button class="btn-primary event-rsvp-btn">RSVP</button>
+                </div>
+              </div>
+            </div>
+          </article>
+
+        </section>
+
+        <!-- Right Sidebar -->
+        <aside class="events-sidebar">
+
+          <section class="widget">
+            <h4 class="widget-title">Your Events</h4>
+            <ul class="your-events-list">
+              <li class="your-event-item">
+                <div class="your-event-date">
+                  <span>28</span>
+                  <span>JUN</span>
+                </div>
+                <div class="your-event-info">
+                  <p class="your-event-name">End of Semester Hangout</p>
+                  <p class="your-event-time">4:00 PM · Campus Lawn</p>
+                </div>
+              </li>
+              <li class="your-event-item">
+                <div class="your-event-date">
+                  <span>24</span>
+                  <span>JUN</span>
+                </div>
+                <div class="your-event-info">
+                  <p class="your-event-name">Annual Hackathon 2025</p>
+                  <p class="your-event-time">9:00 AM · ICT Building</p>
+                </div>
+              </li>
+            </ul>
+          </section>
+
+          <section class="widget">
+            <h4 class="widget-title">This Month</h4>
+            <ul class="month-stats">
+              <li><span class="stat-label-sm">Total Events</span><span class="stat-val">12</span></li>
+              <li><span class="stat-label-sm">You're Attending</span><span class="stat-val">2</span></li>
+              <li><span class="stat-label-sm">Tech Events</span><span class="stat-val">4</span></li>
+              <li><span class="stat-label-sm">Social Events</span><span class="stat-val">3</span></li>
+            </ul>
+          </section>
+
+          <section class="widget">
+            <h4 class="widget-title">Popular Tags</h4>
+            <div class="tags-wrap">
+              <span class="interest-tag">Hackathon</span>
+              <span class="interest-tag">Workshop</span>
+              <span class="interest-tag">Seminar</span>
+              <span class="interest-tag">Sports</span>
+              <span class="interest-tag">Free Entry</span>
+              <span class="interest-tag">Networking</span>
+            </div>
+          </section>
+
+        </aside>
+
+      </div>
+
+      <!-- Create Event Modal -->
+      <div class="modal-overlay hidden" id="create-event-modal">
+        <div class="modal">
+          <div class="modal-header">
+            <h3>Create Event</h3>
+            <button class="modal-close" id="event-modal-close">✕</button>
+          </div>
+          <div class="modal-fields">
+            <div class="field-group">
+              <label>Event Title</label>
+              <input type="text" placeholder="e.g. Python Workshop for Beginners" />
+            </div>
+            <div class="field-group">
+              <label>Category</label>
+              <select>
+                <option>Academic</option>
+                <option>Tech</option>
+                <option>Social</option>
+                <option>Sports</option>
+              </select>
+            </div>
+            <div class="field-row">
+              <div class="field-group">
+                <label>Date</label>
+                <input type="date" />
+              </div>
+              <div class="field-group">
+                <label>Time</label>
+                <input type="time" />
+              </div>
+            </div>
+            <div class="field-group">
+              <label>Location</label>
+              <input type="text" placeholder="e.g. Computer Lab 2" />
+            </div>
+            <div class="field-group">
+              <label>Description</label>
+              <textarea rows="3" placeholder="Tell people what this event is about..."></textarea>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button class="btn-secondary" id="cancel-event">Cancel</button>
+            <button class="btn-primary">➕ Create Event</button>
+          </div>
+        </div>
+      </div>
+
+    </main>
+  </div>
+
+  <script>
+    // Filter tabs
+    const eventFilterTabs = document.querySelectorAll('#event-filter-tabs .filter-tab');
+    const eventCards = document.querySelectorAll('.event-card');
+
+    eventFilterTabs.forEach(tab => {
+      tab.addEventListener('click', function() {
+        eventFilterTabs.forEach(t => t.classList.remove('active'));
+        this.classList.add('active');
+        const filter = this.dataset.filter;
+        eventCards.forEach(card => {
+          card.style.display = (filter === 'all' || card.dataset.category === filter) ? 'flex' : 'none';
+        });
+      });
+    });
+
+    // Create event modal
+    const createEventBtn = document.getElementById('create-event-btn');
+    const createEventModal = document.getElementById('create-event-modal');
+    const eventModalClose = document.getElementById('event-modal-close');
+    const cancelEvent = document.getElementById('cancel-event');
+
+    createEventBtn.addEventListener('click', () => createEventModal.classList.remove('hidden'));
+    eventModalClose.addEventListener('click', () => createEventModal.classList.add('hidden'));
+    cancelEvent.addEventListener('click', () => createEventModal.classList.add('hidden'));
+    createEventModal.addEventListener('click', function(e) {
+      if (e.target === createEventModal) createEventModal.classList.add('hidden');
+    });
+
+    // RSVP button toggle
+    document.querySelectorAll('.event-rsvp-btn').forEach(btn => {
+      btn.addEventListener('click', function() {
+        if (this.classList.contains('btn-primary')) {
+          this.classList.replace('btn-primary', 'btn-secondary');
+          this.textContent = 'Going ✓';
+        } else {
+          this.classList.replace('btn-secondary', 'btn-primary');
+          this.textContent = 'RSVP';
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ConnectSphere — Profile</title>
+  <link rel="stylesheet" href="css folder/feed.css" />
+  <link rel="stylesheet" href="css folder/profile.css" />
+</head>
+
+<body>
+
+  <!-- Top Navigation -->
+  <header class="top-navbar">
+    <nav class="top-nav-inner">
+      <a href="feed.html" class="nav-logo">Connect<span>Sphere</span></a>
+      <div class="search-bar">
+        <span class="search-icon">🔍</span>
+        <input type="search" placeholder="Search..." aria-label="Search" />
+      </div>
+      <div class="nav-actions">
+        <button class="icon-btn" aria-label="Notifications">🔔 <span class="badge">3</span></button>
+        <button class="icon-btn" aria-label="Messages">💬 <span class="badge">5</span></button>
+        <a href="profile.html" class="avatar-btn" aria-label="My Profile">
+          <div class="avatar">JD</div>
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Main Layout -->
+  <div class="app-layout">
+
+    <!-- Left Sidebar -->
+    <aside class="sidebar-left">
+      <section class="mini-profile">
+        <div class="mini-avatar">JD</div>
+        <div class="mini-info">
+          <p class="mini-name">John Doe</p>
+          <p class="mini-meta">300L · Computer Science</p>
+        </div>
+      </section>
+
+      <nav class="sidebar-nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="feed.html" class="nav-item"><span class="nav-icon">🏠</span><span>Home</span></a></li>
+          <li><a href="communities.html" class="nav-item"><span class="nav-icon">🏘️</span><span>Communities</span></a></li>
+          <li><a href="resources.html" class="nav-item"><span class="nav-icon">📚</span><span>Resources</span></a></li>
+          <li><a href="events.html" class="nav-item"><span class="nav-icon">📅</span><span>Events</span></a></li>
+          <li><a href="chat.html" class="nav-item"><span class="nav-icon">💬</span><span>Messages</span></a></li>
+          <li><a href="confessions.html" class="nav-item"><span class="nav-icon">🎭</span><span>Confessions</span></a></li>
+        </ul>
+      </nav>
+
+      <section class="my-spaces">
+        <h4 class="sidebar-section-title">My Spaces</h4>
+        <ul>
+          <li><a href="#" class="space-item"><span class="space-dot" style="background:#6C63FF"></span>300 Level</a></li>
+          <li><a href="community-page.html" class="space-item"><span class="space-dot" style="background:#43CEED"></span>Computer Science</a></li>
+          <li><a href="#" class="space-item"><span class="space-dot" style="background:#FF6584"></span>Tech Enthusiasts</a></li>
+        </ul>
+      </section>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="profile-main">
+
+      <!-- Profile Header -->
+      <section class="profile-header">
+        <div class="profile-cover" style="background: linear-gradient(135deg, #6C63FF, #43CEED)"></div>
+
+        <div class="profile-header-content">
+          <div class="profile-avatar-wrap">
+            <div class="profile-avatar">JD</div>
+            <span class="online-dot"></span>
+          </div>
+
+          <div class="profile-header-info">
+            <div class="profile-name-row">
+              <h1>John Doe</h1>
+              <span class="profile-badge">300L</span>
+            </div>
+            <p class="profile-department">Computer Science · University of Port Harcourt</p>
+            <p class="profile-bio">Passionate about software development, open source, and solving real-world problems with code. 🚀</p>
+
+            <div class="profile-stats">
+              <div class="stat-item">
+                <span class="stat-num">48</span>
+                <span class="stat-label">Posts</span>
+              </div>
+              <div class="stat-divider"></div>
+              <div class="stat-item">
+                <span class="stat-num">312</span>
+                <span class="stat-label">Friends</span>
+              </div>
+              <div class="stat-divider"></div>
+              <div class="stat-item">
+                <span class="stat-num">17</span>
+                <span class="stat-label">Resources</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="profile-actions">
+            <!-- Own profile: show Edit Profile -->
+            <button class="btn-primary">✏️ Edit Profile</button>
+            <!-- Other user: uncomment below and remove above -->
+            <!-- <button class="btn-primary">➕ Follow</button> -->
+            <!-- <button class="btn-secondary">💬 Message</button> -->
+          </div>
+        </div>
+
+        <!-- Tabs -->
+        <nav class="profile-tabs" aria-label="Profile sections">
+          <a href="#" class="tab-item active" data-tab="posts">Posts</a>
+          <a href="#" class="tab-item" data-tab="about">About</a>
+          <a href="#" class="tab-item" data-tab="friends">Friends</a>
+          <a href="#" class="tab-item" data-tab="resources">Resources</a>
+        </nav>
+      </section>
+
+      <!-- Profile Content Grid -->
+      <div class="profile-content-grid">
+
+        <!-- Left: Tab Content -->
+        <section class="profile-feed">
+
+          <!-- POSTS TAB (default visible) -->
+          <div class="tab-content" id="tab-posts">
+
+            <!-- Create Post (own profile only) -->
+            <section class="create-post">
+              <div class="create-post-inner">
+                <div class="avatar sm">JD</div>
+                <button class="create-post-input">What's on your mind, John?</button>
+              </div>
+              <div class="create-post-actions">
+                <button class="post-action-btn">📷 Photo</button>
+                <button class="post-action-btn">📎 File</button>
+                <button class="post-action-btn">📊 Poll</button>
+                <button class="post-action-btn">🎭 Anonymous</button>
+              </div>
+            </section>
+
+            <!-- Post Card 1 -->
+            <article class="post-card">
+              <header class="post-header">
+                <div class="avatar sm">JD</div>
+                <div class="post-meta">
+                  <p class="post-author">John Doe</p>
+                  <p class="post-info">300L · 2h ago</p>
+                </div>
+                <button class="post-options" aria-label="Post options">⋯</button>
+              </header>
+              <section class="post-body">
+                <p>Just finished building a REST API with Node.js and Express. The feeling of seeing Postman return 200 OK is unmatched 😄🔥</p>
+              </section>
+              <footer class="post-footer">
+                <button class="reaction-btn">❤️ 34</button>
+                <button class="reaction-btn">💬 9 Comments</button>
+                <button class="reaction-btn">🔁 Share</button>
+                <button class="reaction-btn">🔖 Save</button>
+              </footer>
+            </article>
+
+            <!-- Post Card 2 -->
+            <article class="post-card">
+              <header class="post-header">
+                <div class="avatar sm">JD</div>
+                <div class="post-meta">
+                  <p class="post-author">John Doe</p>
+                  <p class="post-info">300L · 1d ago</p>
+                </div>
+                <button class="post-options" aria-label="Post options">⋯</button>
+              </header>
+              <section class="post-body">
+                <p>Anyone else feel like Data Structures exam was designed to test your will to live? 😭 Anyway, we move. CGPA must be protected.</p>
+              </section>
+              <footer class="post-footer">
+                <button class="reaction-btn">❤️ 61</button>
+                <button class="reaction-btn">💬 22 Comments</button>
+                <button class="reaction-btn">🔁 Share</button>
+                <button class="reaction-btn">🔖 Save</button>
+              </footer>
+            </article>
+
+          </div>
+
+          <!-- ABOUT TAB (hidden by default) -->
+          <div class="tab-content hidden" id="tab-about">
+            <section class="about-card">
+              <h3 class="about-section-title">Personal Info</h3>
+              <ul class="about-list">
+                <li><span class="about-icon">🎓</span><div><p class="about-label">Level</p><p class="about-value">300 Level</p></div></li>
+                <li><span class="about-icon">📚</span><div><p class="about-label">Department</p><p class="about-value">Computer Science</p></div></li>
+                <li><span class="about-icon">🏫</span><div><p class="about-label">University</p><p class="about-value">University of Port Harcourt</p></div></li>
+                <li><span class="about-icon">📍</span><div><p class="about-label">Location</p><p class="about-value">Port Harcourt, Nigeria</p></div></li>
+                <li><span class="about-icon">📅</span><div><p class="about-label">Joined</p><p class="about-value">September 2024</p></div></li>
+              </ul>
+            </section>
+
+            <section class="about-card">
+              <h3 class="about-section-title">Interests</h3>
+              <div class="interests-wrap">
+                <span class="interest-tag">💻 Web Development</span>
+                <span class="interest-tag">🤖 AI & ML</span>
+                <span class="interest-tag">📱 Mobile Apps</span>
+                <span class="interest-tag">🎮 Gaming</span>
+                <span class="interest-tag">📷 Photography</span>
+                <span class="interest-tag">🎵 Music</span>
+              </div>
+            </section>
+
+            <section class="about-card">
+              <h3 class="about-section-title">Social Links</h3>
+              <ul class="social-links">
+                <li><a href="#" class="social-link">🐙 github.com/johndoe</a></li>
+                <li><a href="#" class="social-link">🔗 linkedin.com/in/johndoe</a></li>
+                <li><a href="#" class="social-link">🐦 @johndoe</a></li>
+              </ul>
+            </section>
+          </div>
+
+          <!-- FRIENDS TAB (hidden by default) -->
+          <div class="tab-content hidden" id="tab-friends">
+            <div class="friends-grid">
+
+              <article class="friend-card">
+                <div class="friend-avatar">AM</div>
+                <p class="friend-name">Ada Mensah</p>
+                <p class="friend-meta">300L · CS</p>
+                <button class="btn-secondary friend-btn">View</button>
+              </article>
+
+              <article class="friend-card">
+                <div class="friend-avatar">KO</div>
+                <p class="friend-name">Kofi Owusu</p>
+                <p class="friend-meta">200L · CS</p>
+                <button class="btn-secondary friend-btn">View</button>
+              </article>
+
+              <article class="friend-card">
+                <div class="friend-avatar">TF</div>
+                <p class="friend-name">Tolu Fashola</p>
+                <p class="friend-meta">300L · EE</p>
+                <button class="btn-secondary friend-btn">View</button>
+              </article>
+
+              <article class="friend-card">
+                <div class="friend-avatar">PL</div>
+                <p class="friend-name">Peace Lawal</p>
+                <p class="friend-meta">400L · CS</p>
+                <button class="btn-secondary friend-btn">View</button>
+              </article>
+
+              <article class="friend-card">
+                <div class="friend-avatar">EB</div>
+                <p class="friend-name">Emeka Bello</p>
+                <p class="friend-meta">300L · MCE</p>
+                <button class="btn-secondary friend-btn">View</button>
+              </article>
+
+              <article class="friend-card">
+                <div class="friend-avatar">NN</div>
+                <p class="friend-name">Ngozi Nwosu</p>
+                <p class="friend-meta">300L · CS</p>
+                <button class="btn-secondary friend-btn">View</button>
+              </article>
+
+            </div>
+          </div>
+
+          <!-- RESOURCES TAB (hidden by default) -->
+          <div class="tab-content hidden" id="tab-resources">
+
+            <article class="resource-card">
+              <div class="resource-icon">📄</div>
+              <div class="resource-info">
+                <p class="resource-title">Data Structures Past Questions 2023</p>
+                <p class="resource-meta">PDF · 2.3MB · Shared 3d ago</p>
+              </div>
+              <button class="btn-secondary resource-btn">Download</button>
+            </article>
+
+            <article class="resource-card">
+              <div class="resource-icon">📊</div>
+              <div class="resource-info">
+                <p class="resource-title">Operating Systems Lecture Notes</p>
+                <p class="resource-meta">PDF · 5.1MB · Shared 1w ago</p>
+              </div>
+              <button class="btn-secondary resource-btn">Download</button>
+            </article>
+
+            <article class="resource-card">
+              <div class="resource-icon">📝</div>
+              <div class="resource-info">
+                <p class="resource-title">Software Engineering Assignment Template</p>
+                <p class="resource-meta">DOCX · 340KB · Shared 2w ago</p>
+              </div>
+              <button class="btn-secondary resource-btn">Download</button>
+            </article>
+
+          </div>
+
+        </section>
+
+        <!-- Right Sidebar -->
+        <aside class="profile-sidebar">
+
+          <section class="widget">
+            <h4 class="widget-title">Communities</h4>
+            <ul class="profile-communities">
+              <li class="profile-community-item">
+                <div class="community-dot" style="background:#6C63FF">3L</div>
+                <div>
+                  <p class="pc-name">300 Level</p>
+                  <p class="pc-meta">1.2k members</p>
+                </div>
+              </li>
+              <li class="profile-community-item">
+                <div class="community-dot" style="background:#43CEED">CS</div>
+                <div>
+                  <p class="pc-name">Computer Science</p>
+                  <p class="pc-meta">2.4k members</p>
+                </div>
+              </li>
+              <li class="profile-community-item">
+                <div class="community-dot" style="background:#FF6584">TE</div>
+                <div>
+                  <p class="pc-name">Tech Enthusiasts</p>
+                  <p class="pc-meta">540 members</p>
+                </div>
+              </li>
+            </ul>
+          </section>
+
+          <section class="widget">
+            <h4 class="widget-title">Mutual Friends</h4>
+            <div class="mutual-avatars">
+              <div class="avatar sm">AM</div>
+              <div class="avatar sm">KO</div>
+              <div class="avatar sm">TF</div>
+              <div class="avatar sm">PL</div>
+              <div class="avatar-more">+8</div>
+            </div>
+          </section>
+
+        </aside>
+
+      </div>
+
+    </main>
+
+  </div>
+
+  <script>
+    // Tab switching
+    const tabs = document.querySelectorAll('.tab-item[data-tab]');
+    const contents = document.querySelectorAll('.tab-content');
+
+    tabs.forEach(tab => {
+      tab.addEventListener('click', function(e) {
+        e.preventDefault();
+        tabs.forEach(t => t.classList.remove('active'));
+        contents.forEach(c => c.classList.add('hidden'));
+        this.classList.add('active');
+        document.getElementById('tab-' + this.dataset.tab).classList.remove('hidden');
+      });
+    });
+  </script>
+
+</body>
+</html>

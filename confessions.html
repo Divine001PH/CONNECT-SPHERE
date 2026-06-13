@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ConnectSphere — Confessions</title>
+  <link rel="stylesheet" href="css folder/feed.css" />
+  <link rel="stylesheet" href="css folder/confessions.css" />
+</head>
+
+<body>
+
+  <!-- Top Navigation -->
+  <header class="top-navbar">
+    <nav class="top-nav-inner">
+      <a href="feed.html" class="nav-logo">Connect<span>Sphere</span></a>
+      <div class="search-bar">
+        <span class="search-icon">🔍</span>
+        <input type="search" placeholder="Search confessions..." aria-label="Search confessions" />
+      </div>
+      <div class="nav-actions">
+        <button class="icon-btn" aria-label="Notifications">🔔 <span class="badge">3</span></button>
+        <button class="icon-btn" aria-label="Messages">💬 <span class="badge">5</span></button>
+        <a href="profile.html" class="avatar-btn" aria-label="My Profile">
+          <div class="avatar">JD</div>
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <div class="app-layout">
+
+    <!-- Left Sidebar -->
+    <aside class="sidebar-left">
+      <section class="mini-profile">
+        <div class="mini-avatar">JD</div>
+        <div class="mini-info">
+          <p class="mini-name">John Doe</p>
+          <p class="mini-meta">300L · Computer Science</p>
+        </div>
+      </section>
+
+      <nav class="sidebar-nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="feed.html" class="nav-item"><span class="nav-icon">🏠</span><span>Home</span></a></li>
+          <li><a href="communities.html" class="nav-item"><span class="nav-icon">🏘️</span><span>Communities</span></a></li>
+          <li><a href="resources.html" class="nav-item"><span class="nav-icon">📚</span><span>Resources</span></a></li>
+          <li><a href="events.html" class="nav-item"><span class="nav-icon">📅</span><span>Events</span></a></li>
+          <li><a href="chat.html" class="nav-item"><span class="nav-icon">💬</span><span>Messages</span></a></li>
+          <li><a href="confessions.html" class="nav-item active"><span class="nav-icon">🎭</span><span>Confessions</span></a></li>
+        </ul>
+      </nav>
+
+      <section class="my-spaces">
+        <h4 class="sidebar-section-title">My Spaces</h4>
+        <ul>
+          <li><a href="#" class="space-item"><span class="space-dot" style="background:#6C63FF"></span>300 Level</a></li>
+          <li><a href="community-page.html" class="space-item"><span class="space-dot" style="background:#43CEED"></span>Computer Science</a></li>
+          <li><a href="#" class="space-item"><span class="space-dot" style="background:#FF6584"></span>Tech Enthusiasts</a></li>
+        </ul>
+      </section>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="confessions-main">
+
+      <!-- Page Header -->
+      <div class="confessions-page-header">
+        <div class="header-left">
+          <h1>🎭 Confessions & Shoutouts</h1>
+          <p>A safe space to share anonymously — be kind, be real</p>
+        </div>
+        <button class="btn-primary confess-btn" id="confess-btn">
+          🎭 Post Anonymously
+        </button>
+      </div>
+
+      <!-- Info Banner -->
+      <div class="info-banner">
+        <span class="info-icon">🔒</span>
+        <p>Your identity is always hidden from other users. Posts are moderated to keep this space safe and respectful.</p>
+      </div>
+
+      <!-- Filter Bar -->
+      <div class="confessions-filter-bar">
+        <div class="filter-tabs" id="conf-filter-tabs">
+          <button class="filter-tab active" data-filter="all">All</button>
+          <button class="filter-tab" data-filter="confession">😶 Confessions</button>
+          <button class="filter-tab" data-filter="shoutout">📣 Shoutouts</button>
+          <button class="filter-tab" data-filter="advice">🙋 Advice</button>
+          <button class="filter-tab" data-filter="rant">😤 Rants</button>
+        </div>
+        <select class="filter-select">
+          <option value="latest">Latest</option>
+          <option value="popular">Most Popular</option>
+          <option value="trending">Trending</option>
+        </select>
+      </div>
+
+      <!-- Content Grid -->
+      <div class="confessions-content">
+
+        <!-- Confessions Feed -->
+        <section class="confessions-feed">
+
+          <!-- Confession Card 1 -->
+          <article class="confession-card" data-type="confession">
+            <header class="confession-header">
+              <div class="anon-avatar">🎭</div>
+              <div class="confession-meta">
+                <p class="anon-name">Anonymous</p>
+                <p class="confession-info">300L · Computer Science · 2h ago</p>
+              </div>
+              <span class="confession-tag confession">😶 Confession</span>
+            </header>
+            <section class="confession-body">
+              <p>I haven't attended a single lecture this semester and I'm lowkey scared for exams. But somehow I still feel like I'll be fine 😂 pray for me.</p>
+            </section>
+            <footer class="confession-footer">
+              <button class="conf-reaction-btn active">❤️ 84</button>
+              <button class="conf-reaction-btn">😂 41</button>
+              <button class="conf-reaction-btn">😮 12</button>
+              <button class="conf-reaction-btn comment-btn">💬 23</button>
+              <button class="conf-reaction-btn report-btn">🚩</button>
+            </footer>
+          </article>
+
+          <!-- Confession Card 2 -->
+          <article class="confession-card" data-type="shoutout">
+            <header class="confession-header">
+              <div class="anon-avatar">🎭</div>
+              <div class="confession-meta">
+                <p class="anon-name">Anonymous</p>
+                <p class="confession-info">200L · Computer Science · 4h ago</p>
+              </div>
+              <span class="confession-tag shoutout">📣 Shoutout</span>
+            </header>
+            <section class="confession-body">
+              <p>Huge shoutout to whoever shared those Data Structures past questions in the CS community 🙏 You literally just saved my life. God bless you abundantly!</p>
+            </section>
+            <footer class="confession-footer">
+              <button class="conf-reaction-btn">❤️ 120</button>
+              <button class="conf-reaction-btn">😂 5</button>
+              <button class="conf-reaction-btn">😮 3</button>
+              <button class="conf-reaction-btn comment-btn">💬 14</button>
+              <button class="conf-reaction-btn report-btn">🚩</button>
+            </footer>
+          </article>
+
+          <!-- Confession Card 3 -->
+          <article class="confession-card" data-type="advice">
+            <header class="confession-header">
+              <div class="anon-avatar">🎭</div>
+              <div class="confession-meta">
+                <p class="anon-name">Anonymous</p>
+                <p class="confession-info">400L · Computer Science · 6h ago</p>
+              </div>
+              <span class="confession-tag advice">🙋 Advice</span>
+            </header>
+            <section class="confession-body">
+              <p>How do you guys handle project group members who do absolutely nothing but still want to be on the final submission? I'm tired of carrying people 😭 please help.</p>
+            </section>
+            <footer class="confession-footer">
+              <button class="conf-reaction-btn">❤️ 67</button>
+              <button class="conf-reaction-btn">😂 29</button>
+              <button class="conf-reaction-btn">😮 8</button>
+              <button class="conf-reaction-btn comment-btn">💬 45</button>
+              <button class="conf-reaction-btn report-btn">🚩</button>
+            </footer>
+          </article>
+
+          <!-- Confession Card 4 -->
+          <article class="confession-card" data-type="rant">
+            <header class="confession-header">
+              <div class="anon-avatar">🎭</div>
+              <div class="confession-meta">
+                <p class="anon-name">Anonymous</p>
+                <p class="confession-info">300L · Computer Science · 1d ago</p>
+              </div>
+              <span class="confession-tag rant">😤 Rant</span>
+            </header>
+            <section class="confession-body">
+              <p>Why do lecturers upload course materials the night before the exam?? We've been asking for slides since week 1 and suddenly they remember on exam eve. This is wickedness 😤</p>
+            </section>
+            <footer class="confession-footer">
+              <button class="conf-reaction-btn">❤️ 203</button>
+              <button class="conf-reaction-btn">😂 88</button>
+              <button class="conf-reaction-btn">😮 14</button>
+              <button class="conf-reaction-btn comment-btn">💬 61</button>
+              <button class="conf-reaction-btn report-btn">🚩</button>
+            </footer>
+          </article>
+
+          <!-- Confession Card 5 -->
+          <article class="confession-card" data-type="confession">
+            <header class="confession-header">
+              <div class="anon-avatar">🎭</div>
+              <div class="confession-meta">
+                <p class="anon-name">Anonymous</p>
+                <p class="confession-info">100L · Computer Science · 2d ago</p>
+              </div>
+              <span class="confession-tag confession">😶 Confession</span>
+            </header>
+            <section class="confession-body">
+              <p>I chose Computer Science because of the money but I'm genuinely starting to love coding now. Never thought I'd say this but programming is actually fun 😅</p>
+            </section>
+            <footer class="confession-footer">
+              <button class="conf-reaction-btn">❤️ 156</button>
+              <button class="conf-reaction-btn">😂 72</button>
+              <button class="conf-reaction-btn">😮 19</button>
+              <button class="conf-reaction-btn comment-btn">💬 38</button>
+              <button class="conf-reaction-btn report-btn">🚩</button>
+            </footer>
+          </article>
+
+          <!-- Confession Card 6 -->
+          <article class="confession-card" data-type="shoutout">
+            <header class="confession-header">
+              <div class="anon-avatar">🎭</div>
+              <div class="confession-meta">
+                <p class="anon-name">Anonymous</p>
+                <p class="confession-info">300L · Computer Science · 3d ago</p>
+              </div>
+              <span class="confession-tag shoutout">📣 Shoutout</span>
+            </header>
+            <section class="confession-body">
+              <p>Shoutout to the CS 300L class rep for always keeping us updated and fighting for us with the HOD. You don't get enough appreciation 🙌</p>
+            </section>
+            <footer class="confession-footer">
+              <button class="conf-reaction-btn">❤️ 245</button>
+              <button class="conf-reaction-btn">😂 3</button>
+              <button class="conf-reaction-btn">😮 2</button>
+              <button class="conf-reaction-btn comment-btn">💬 27</button>
+              <button class="conf-reaction-btn report-btn">🚩</button>
+            </footer>
+          </article>
+
+        </section>
+
+        <!-- Right Sidebar -->
+        <aside class="confessions-sidebar">
+
+          <!-- Rules -->
+          <section class="widget rules-widget">
+            <h4 class="widget-title">📋 Community Rules</h4>
+            <ul class="rules-list">
+              <li>
+                <span class="rule-num">1</span>
+                <p>Be respectful — no bullying or targeted attacks</p>
+              </li>
+              <li>
+                <span class="rule-num">2</span>
+                <p>No revealing other people's identities</p>
+              </li>
+              <li>
+                <span class="rule-num">3</span>
+                <p>Keep it relevant to campus life</p>
+              </li>
+              <li>
+                <span class="rule-num">4</span>
+                <p>No hate speech or discriminatory content</p>
+              </li>
+              <li>
+                <span class="rule-num">5</span>
+                <p>Report anything that feels wrong</p>
+              </li>
+            </ul>
+          </section>
+
+          <!-- Stats -->
+          <section class="widget">
+            <h4 class="widget-title">📊 Board Stats</h4>
+            <ul class="conf-stats">
+              <li>
+                <span class="stat-label-sm">Total Posts</span>
+                <span class="stat-val">1,284</span>
+              </li>
+              <li>
+                <span class="stat-label-sm">Posted Today</span>
+                <span class="stat-val">47</span>
+              </li>
+              <li>
+                <span class="stat-label-sm">Most Liked</span>
+                <span class="stat-val">❤️ 312</span>
+              </li>
+              <li>
+                <span class="stat-label-sm">Your Posts</span>
+                <span class="stat-val">3</span>
+              </li>
+            </ul>
+          </section>
+
+          <!-- Trending Tags -->
+          <section class="widget">
+            <h4 class="widget-title">🔥 Trending</h4>
+            <div class="tags-wrap">
+              <span class="interest-tag">#ExamSzn</span>
+              <span class="interest-tag">#ClassRep</span>
+              <span class="interest-tag">#GroupWork</span>
+              <span class="interest-tag">#LecturerThings</span>
+              <span class="interest-tag">#CampusLife</span>
+              <span class="interest-tag">#300LStruggles</span>
+            </div>
+          </section>
+
+          <!-- Daily Limit -->
+          <section class="widget daily-limit-widget">
+            <h4 class="widget-title">⏳ Daily Limit</h4>
+            <div class="limit-bar-wrap">
+              <div class="limit-bar">
+                <div class="limit-fill" style="width: 60%"></div>
+              </div>
+              <p class="limit-text">3 of 5 posts used today</p>
+            </div>
+          </section>
+
+        </aside>
+
+      </div>
+
+      <!-- Post Anonymously Modal -->
+      <div class="modal-overlay hidden" id="confess-modal">
+        <div class="modal confess-modal">
+          <div class="modal-header">
+            <div class="modal-title-group">
+              <span class="modal-mask">🎭</span>
+              <h3>Post Anonymously</h3>
+            </div>
+            <button class="modal-close" id="confess-modal-close">✕</button>
+          </div>
+
+          <div class="modal-fields">
+
+            <div class="field-group">
+              <label>Category</label>
+              <div class="category-pills">
+                <button class="cat-pill active" data-cat="confession">😶 Confession</button>
+                <button class="cat-pill" data-cat="shoutout">📣 Shoutout</button>
+                <button class="cat-pill" data-cat="advice">🙋 Advice</button>
+                <button class="cat-pill" data-cat="rant">😤 Rant</button>
+              </div>
+            </div>
+
+            <div class="field-group">
+              <label>Your Post</label>
+              <textarea
+                id="confession-text"
+                rows="5"
+                placeholder="Share your thoughts anonymously... your identity is completely hidden 🎭"
+                maxlength="500"
+              ></textarea>
+              <p class="char-count"><span id="char-count">0</span>/500</p>
+            </div>
+
+            <div class="anon-notice">
+              <span>🔒</span>
+              <p>Your name, profile and identity will never be revealed to anyone — only admins can see who posted in cases of violations.</p>
+            </div>
+
+          </div>
+
+          <div class="modal-footer">
+            <button class="btn-secondary" id="cancel-confess">Cancel</button>
+            <button class="btn-primary" id="submit-confess">🎭 Post Anonymously</button>
+          </div>
+        </div>
+      </div>
+
+    </main>
+  </div>
+
+  <script>
+    // Filter tabs
+    const confFilterTabs = document.querySelectorAll('#conf-filter-tabs .filter-tab');
+    const confessionCards = document.querySelectorAll('.confession-card');
+
+    confFilterTabs.forEach(tab => {
+      tab.addEventListener('click', function() {
+        confFilterTabs.forEach(t => t.classList.remove('active'));
+        this.classList.add('active');
+        const filter = this.dataset.filter;
+        confessionCards.forEach(card => {
+          card.style.display = (filter === 'all' || card.dataset.type === filter) ? 'flex' : 'none';
+        });
+      });
+    });
+
+    // Modal open/close
+    const confessBtn = document.getElementById('confess-btn');
+    const confessModal = document.getElementById('confess-modal');
+    const confessModalClose = document.getElementById('confess-modal-close');
+    const cancelConfess = document.getElementById('cancel-confess');
+
+    confessBtn.addEventListener('click', () => confessModal.classList.remove('hidden'));
+    confessModalClose.addEventListener('click', () => confessModal.classList.add('hidden'));
+    cancelConfess.addEventListener('click', () => confessModal.classList.add('hidden'));
+    confessModal.addEventListener('click', function(e) {
+      if (e.target === confessModal) confessModal.classList.add('hidden');
+    });
+
+    // Character count
+    const confessionText = document.getElementById('confession-text');
+    const charCount = document.getElementById('char-count');
+    confessionText.addEventListener('input', function() {
+      charCount.textContent = this.value.length;
+    });
+
+    // Category pills
+    const catPills = document.querySelectorAll('.cat-pill');
+    catPills.forEach(pill => {
+      pill.addEventListener('click', function() {
+        catPills.forEach(p => p.classList.remove('active'));
+        this.classList.add('active');
+      });
+    });
+
+    // Submit confession — adds new card to feed
+    const submitConfess = document.getElementById('submit-confess');
+    const confessionsFeed = document.querySelector('.confessions-feed');
+
+    submitConfess.addEventListener('click', function() {
+      const text = confessionText.value.trim();
+      if (!text) return;
+
+      const activeCat = document.querySelector('.cat-pill.active');
+      const catKey = activeCat ? activeCat.dataset.cat : 'confession';
+      const catLabels = {
+        confession: '😶 Confession',
+        shoutout: '📣 Shoutout',
+        advice: '🙋 Advice',
+        rant: '😤 Rant'
+      };
+
+      const card = document.createElement('article');
+      card.className = 'confession-card';
+      card.dataset.type = catKey;
+      card.innerHTML = `
+        <header class="confession-header">
+          <div class="anon-avatar">🎭</div>
+          <div class="confession-meta">
+            <p class="anon-name">Anonymous</p>
+            <p class="confession-info">300L · Computer Science · Just now</p>
+          </div>
+          <span class="confession-tag ${catKey}">${catLabels[catKey]}</span>
+        </header>
+        <section class="confession-body">
+          <p>${text}</p>
+        </section>
+        <footer class="confession-footer">
+          <button class="conf-reaction-btn">❤️ 0</button>
+          <button class="conf-reaction-btn">😂 0</button>
+          <button class="conf-reaction-btn">😮 0</button>
+          <button class="conf-reaction-btn comment-btn">💬 0</button>
+          <button class="conf-reaction-btn report-btn">🚩</button>
+        </footer>`;
+
+      confessionsFeed.insertBefore(card, confessionsFeed.firstChild);
+      confessionText.value = '';
+      charCount.textContent = '0';
+      confessModal.classList.add('hidden');
+    });
+
+    // Reaction buttons toggle
+    document.addEventListener('click', function(e) {
+      if (e.target.classList.contains('conf-reaction-btn') &&
+          !e.target.classList.contains('report-btn') &&
+          !e.target.classList.contains('comment-btn')) {
+        e.target.classList.toggle('active');
+      }
+    });
+  </script>
+
+</body>
+</html>

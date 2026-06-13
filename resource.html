@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ConnectSphere — Resources</title>
+  <link rel="stylesheet" href="css folder/feed.css" />
+  <link rel="stylesheet" href="css folder/resources.css" />
+</head>
+
+<body>
+
+  <!-- Top Navigation -->
+  <header class="top-navbar">
+    <nav class="top-nav-inner">
+      <a href="feed.html" class="nav-logo">Connect<span>Sphere</span></a>
+      <div class="search-bar">
+        <span class="search-icon">🔍</span>
+        <input type="search" placeholder="Search resources..." aria-label="Search resources" />
+      </div>
+      <div class="nav-actions">
+        <button class="icon-btn" aria-label="Notifications">🔔 <span class="badge">3</span></button>
+        <button class="icon-btn" aria-label="Messages">💬 <span class="badge">5</span></button>
+        <a href="profile.html" class="avatar-btn" aria-label="My Profile">
+          <div class="avatar">JD</div>
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Main Layout -->
+  <div class="app-layout">
+
+    <!-- Left Sidebar -->
+    <aside class="sidebar-left">
+      <section class="mini-profile">
+        <div class="mini-avatar">JD</div>
+        <div class="mini-info">
+          <p class="mini-name">John Doe</p>
+          <p class="mini-meta">300L · Computer Science</p>
+        </div>
+      </section>
+
+      <nav class="sidebar-nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="feed.html" class="nav-item"><span class="nav-icon">🏠</span><span>Home</span></a></li>
+          <li><a href="communities.html" class="nav-item"><span class="nav-icon">🏘️</span><span>Communities</span></a></li>
+          <li><a href="resources.html" class="nav-item active"><span class="nav-icon">📚</span><span>Resources</span></a></li>
+          <li><a href="events.html" class="nav-item"><span class="nav-icon">📅</span><span>Events</span></a></li>
+          <li><a href="chat.html" class="nav-item"><span class="nav-icon">💬</span><span>Messages</span></a></li>
+          <li><a href="confessions.html" class="nav-item"><span class="nav-icon">🎭</span><span>Confessions</span></a></li>
+        </ul>
+      </nav>
+
+      <section class="my-spaces">
+        <h4 class="sidebar-section-title">My Spaces</h4>
+        <ul>
+          <li><a href="#" class="space-item"><span class="space-dot" style="background:#6C63FF"></span>300 Level</a></li>
+          <li><a href="community-page.html" class="space-item"><span class="space-dot" style="background:#43CEED"></span>Computer Science</a></li>
+          <li><a href="#" class="space-item"><span class="space-dot" style="background:#FF6584"></span>Tech Enthusiasts</a></li>
+        </ul>
+      </section>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="resources-main">
+
+      <!-- Page Header -->
+      <div class="resources-page-header">
+        <div>
+          <h1>Resources</h1>
+          <p>Study materials, past questions and lecture notes shared by students</p>
+        </div>
+        <button class="btn-primary upload-btn" id="upload-btn">📤 Upload Resource</button>
+      </div>
+
+      <!-- Filter Bar -->
+      <div class="filter-bar">
+        <div class="filter-tabs" id="filter-tabs">
+          <button class="filter-tab active" data-filter="all">All</button>
+          <button class="filter-tab" data-filter="pdf">📄 PDF</button>
+          <button class="filter-tab" data-filter="doc">📝 DOC</button>
+          <button class="filter-tab" data-filter="slides">📊 Slides</button>
+          <button class="filter-tab" data-filter="video">🎥 Video</button>
+        </div>
+
+        <select class="filter-select" id="dept-filter">
+          <option value="all">All Departments</option>
+          <option value="cs">Computer Science</option>
+          <option value="ee">Electrical Engineering</option>
+          <option value="mce">Mechanical Engineering</option>
+          <option value="law">Law</option>
+        </select>
+      </div>
+
+      <!-- Resources Grid -->
+      <div class="resources-content">
+
+        <!-- Main Resources List -->
+        <section class="resources-list">
+
+          <article class="resource-item" data-type="pdf" data-dept="cs">
+            <div class="resource-file-icon pdf">PDF</div>
+            <div class="resource-details">
+              <h3 class="resource-name">Data Structures & Algorithms — Past Questions 2023</h3>
+              <p class="resource-course">CSC 301 · Computer Science</p>
+              <div class="resource-meta-row">
+                <span class="resource-tag">Past Questions</span>
+                <span class="resource-size">2.3 MB</span>
+                <span class="resource-downloads">⬇️ 124 downloads</span>
+              </div>
+            </div>
+            <div class="resource-uploader">
+              <div class="avatar sm">AM</div>
+              <div>
+                <p class="uploader-name">Ada Mensah</p>
+                <p class="uploader-time">2d ago</p>
+              </div>
+            </div>
+            <div class="resource-actions">
+              <button class="btn-primary resource-dl-btn">Download</button>
+              <button class="icon-btn save-btn" aria-label="Save">🔖</button>
+            </div>
+          </article>
+
+          <article class="resource-item" data-type="slides" data-dept="cs">
+            <div class="resource-file-icon slides">PPT</div>
+            <div class="resource-details">
+              <h3 class="resource-name">Operating Systems — Week 5 Lecture Slides</h3>
+              <p class="resource-course">CSC 305 · Computer Science</p>
+              <div class="resource-meta-row">
+                <span class="resource-tag">Lecture Slides</span>
+                <span class="resource-size">5.1 MB</span>
+                <span class="resource-downloads">⬇️ 89 downloads</span>
+              </div>
+            </div>
+            <div class="resource-uploader">
+              <div class="avatar sm">JD</div>
+              <div>
+                <p class="uploader-name">John Doe</p>
+                <p class="uploader-time">1w ago</p>
+              </div>
+            </div>
+            <div class="resource-actions">
+              <button class="btn-primary resource-dl-btn">Download</button>
+              <button class="icon-btn save-btn" aria-label="Save">🔖</button>
+            </div>
+          </article>
+
+          <article class="resource-item" data-type="doc" data-dept="cs">
+            <div class="resource-file-icon doc">DOC</div>
+            <div class="resource-details">
+              <h3 class="resource-name">Software Engineering Assignment Template</h3>
+              <p class="resource-course">CSC 311 · Computer Science</p>
+              <div class="resource-meta-row">
+                <span class="resource-tag">Template</span>
+                <span class="resource-size">340 KB</span>
+                <span class="resource-downloads">⬇️ 56 downloads</span>
+              </div>
+            </div>
+            <div class="resource-uploader">
+              <div class="avatar sm">KO</div>
+              <div>
+                <p class="uploader-name">Kofi Owusu</p>
+                <p class="uploader-time">2w ago</p>
+              </div>
+            </div>
+            <div class="resource-actions">
+              <button class="btn-primary resource-dl-btn">Download</button>
+              <button class="icon-btn save-btn" aria-label="Save">🔖</button>
+            </div>
+          </article>
+
+          <article class="resource-item" data-type="pdf" data-dept="ee">
+            <div class="resource-file-icon pdf">PDF</div>
+            <div class="resource-details">
+              <h3 class="resource-name">Circuit Analysis — Full Semester Notes</h3>
+              <p class="resource-course">EEE 301 · Electrical Engineering</p>
+              <div class="resource-meta-row">
+                <span class="resource-tag">Lecture Notes</span>
+                <span class="resource-size">8.7 MB</span>
+                <span class="resource-downloads">⬇️ 210 downloads</span>
+              </div>
+            </div>
+            <div class="resource-uploader">
+              <div class="avatar sm">TF</div>
+              <div>
+                <p class="uploader-name">Tolu Fashola</p>
+                <p class="uploader-time">3d ago</p>
+              </div>
+            </div>
+            <div class="resource-actions">
+              <button class="btn-primary resource-dl-btn">Download</button>
+              <button class="icon-btn save-btn" aria-label="Save">🔖</button>
+            </div>
+          </article>
+
+          <article class="resource-item" data-type="video" data-dept="cs">
+            <div class="resource-file-icon video">VID</div>
+            <div class="resource-details">
+              <h3 class="resource-name">Database Management — ER Diagram Tutorial</h3>
+              <p class="resource-course">CSC 303 · Computer Science</p>
+              <div class="resource-meta-row">
+                <span class="resource-tag">Tutorial</span>
+                <span class="resource-size">145 MB</span>
+                <span class="resource-downloads">⬇️ 67 downloads</span>
+              </div>
+            </div>
+            <div class="resource-uploader">
+              <div class="avatar sm">NN</div>
+              <div>
+                <p class="uploader-name">Ngozi Nwosu</p>
+                <p class="uploader-time">5d ago</p>
+              </div>
+            </div>
+            <div class="resource-actions">
+              <button class="btn-primary resource-dl-btn">Download</button>
+              <button class="icon-btn save-btn" aria-label="Save">🔖</button>
+            </div>
+          </article>
+
+          <article class="resource-item" data-type="pdf" data-dept="cs">
+            <div class="resource-file-icon pdf">PDF</div>
+            <div class="resource-details">
+              <h3 class="resource-name">Computer Networks — Past Questions 2022</h3>
+              <p class="resource-course">CSC 307 · Computer Science</p>
+              <div class="resource-meta-row">
+                <span class="resource-tag">Past Questions</span>
+                <span class="resource-size">1.8 MB</span>
+                <span class="resource-downloads">⬇️ 98 downloads</span>
+              </div>
+            </div>
+            <div class="resource-uploader">
+              <div class="avatar sm">PL</div>
+              <div>
+                <p class="uploader-name">Peace Lawal</p>
+                <p class="uploader-time">1w ago</p>
+              </div>
+            </div>
+            <div class="resource-actions">
+              <button class="btn-primary resource-dl-btn">Download</button>
+              <button class="icon-btn save-btn" aria-label="Save">🔖</button>
+            </div>
+          </article>
+
+        </section>
+
+        <!-- Right Sidebar -->
+        <aside class="resources-sidebar">
+
+          <section class="widget">
+            <h4 class="widget-title">Top Contributors</h4>
+            <ul class="contributors-list">
+              <li class="contributor-item">
+                <div class="avatar sm">AM</div>
+                <div class="contributor-info">
+                  <p class="contributor-name">Ada Mensah</p>
+                  <p class="contributor-count">12 uploads</p>
+                </div>
+                <span class="contributor-rank">🥇</span>
+              </li>
+              <li class="contributor-item">
+                <div class="avatar sm">TF</div>
+                <div class="contributor-info">
+                  <p class="contributor-name">Tolu Fashola</p>
+                  <p class="contributor-count">9 uploads</p>
+                </div>
+                <span class="contributor-rank">🥈</span>
+              </li>
+              <li class="contributor-item">
+                <div class="avatar sm">PL</div>
+                <div class="contributor-info">
+                  <p class="contributor-name">Peace Lawal</p>
+                  <p class="contributor-count">7 uploads</p>
+                </div>
+                <span class="contributor-rank">🥉</span>
+              </li>
+            </ul>
+          </section>
+
+          <section class="widget">
+            <h4 class="widget-title">Popular Tags</h4>
+            <div class="tags-wrap">
+              <span class="interest-tag">Past Questions</span>
+              <span class="interest-tag">Lecture Notes</span>
+              <span class="interest-tag">Assignments</span>
+              <span class="interest-tag">Tutorials</span>
+              <span class="interest-tag">Templates</span>
+              <span class="interest-tag">Textbooks</span>
+            </div>
+          </section>
+
+          <section class="widget">
+            <h4 class="widget-title">Your Uploads</h4>
+            <div class="your-uploads">
+              <p class="your-uploads-count">17</p>
+              <p class="your-uploads-label">Resources shared</p>
+              <button class="btn-primary upload-btn-sm">📤 Upload New</button>
+            </div>
+          </section>
+
+        </aside>
+
+      </div>
+
+      <!-- Upload Modal -->
+      <div class="modal-overlay hidden" id="upload-modal">
+        <div class="modal">
+          <div class="modal-header">
+            <h3>Upload Resource</h3>
+            <button class="modal-close" id="modal-close">✕</button>
+          </div>
+
+          <div class="upload-area" id="upload-area">
+            <div class="upload-icon">📁</div>
+            <p class="upload-label">Drag & drop your file here</p>
+            <p class="upload-sub">or</p>
+            <button class="btn-secondary">Browse File</button>
+            <p class="upload-formats">PDF, DOC, PPT, MP4 · Max 50MB</p>
+          </div>
+
+          <div class="modal-fields">
+            <div class="field-group">
+              <label>Resource Title</label>
+              <input type="text" placeholder="e.g. Data Structures Past Questions 2023" />
+            </div>
+            <div class="field-group">
+              <label>Course Code</label>
+              <input type="text" placeholder="e.g. CSC 301" />
+            </div>
+            <div class="field-group">
+              <label>Department</label>
+              <select>
+                <option>Computer Science</option>
+                <option>Electrical Engineering</option>
+                <option>Mechanical Engineering</option>
+                <option>Law</option>
+              </select>
+            </div>
+            <div class="field-group">
+              <label>Tag</label>
+              <select>
+                <option>Past Questions</option>
+                <option>Lecture Notes</option>
+                <option>Lecture Slides</option>
+                <option>Assignment</option>
+                <option>Template</option>
+                <option>Tutorial</option>
+                <option>Textbook</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="modal-footer">
+            <button class="btn-secondary" id="cancel-upload">Cancel</button>
+            <button class="btn-primary">📤 Upload</button>
+          </div>
+        </div>
+      </div>
+
+    </main>
+  </div>
+
+  <script>
+    // Filter tabs
+    const filterTabs = document.querySelectorAll('.filter-tab');
+    const resourceItems = document.querySelectorAll('.resource-item');
+
+    filterTabs.forEach(tab => {
+      tab.addEventListener('click', function() {
+        filterTabs.forEach(t => t.classList.remove('active'));
+        this.classList.add('active');
+        const filter = this.dataset.filter;
+        resourceItems.forEach(item => {
+          item.style.display = (filter === 'all' || item.dataset.type === filter) ? 'flex' : 'none';
+        });
+      });
+    });
+
+    // Upload modal
+    const uploadBtn = document.getElementById('upload-btn');
+    const uploadModal = document.getElementById('upload-modal');
+    const modalClose = document.getElementById('modal-close');
+    const cancelUpload = document.getElementById('cancel-upload');
+
+    uploadBtn.addEventListener('click', () => uploadModal.classList.remove('hidden'));
+    modalClose.addEventListener('click', () => uploadModal.classList.add('hidden'));
+    cancelUpload.addEventListener('click', () => uploadModal.classList.add('hidden'));
+    uploadModal.addEventListener('click', function(e) {
+      if (e.target === uploadModal) uploadModal.classList.add('hidden');
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ConnectSphere — Messages</title>
+  <link rel="stylesheet" href="css folder/feed.css" />
+  <link rel="stylesheet" href="css folder/chat.css" />
+</head>
+
+<body>
+
+  <!-- Top Navigation -->
+  <header class="top-navbar">
+    <nav class="top-nav-inner">
+      <a href="feed.html" class="nav-logo">Connect<span>Sphere</span></a>
+      <div class="search-bar">
+        <span class="search-icon">🔍</span>
+        <input type="search" placeholder="Search messages..." aria-label="Search messages" />
+      </div>
+      <div class="nav-actions">
+        <button class="icon-btn" aria-label="Notifications">🔔 <span class="badge">3</span></button>
+        <button class="icon-btn" aria-label="Messages">💬 <span class="badge">5</span></button>
+        <a href="profile.html" class="avatar-btn" aria-label="My Profile">
+          <div class="avatar">JD</div>
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Main Layout -->
+  <div class="app-layout">
+
+    <!-- Left Sidebar -->
+    <aside class="sidebar-left">
+      <section class="mini-profile">
+        <div class="mini-avatar">JD</div>
+        <div class="mini-info">
+          <p class="mini-name">John Doe</p>
+          <p class="mini-meta">300L · Computer Science</p>
+        </div>
+      </section>
+
+      <nav class="sidebar-nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="feed.html" class="nav-item"><span class="nav-icon">🏠</span><span>Home</span></a></li>
+          <li><a href="communities.html" class="nav-item"><span class="nav-icon">🏘️</span><span>Communities</span></a></li>
+          <li><a href="resources.html" class="nav-item"><span class="nav-icon">📚</span><span>Resources</span></a></li>
+          <li><a href="events.html" class="nav-item"><span class="nav-icon">📅</span><span>Events</span></a></li>
+          <li><a href="chat.html" class="nav-item active"><span class="nav-icon">💬</span><span>Messages</span></a></li>
+          <li><a href="confessions.html" class="nav-item"><span class="nav-icon">🎭</span><span>Confessions</span></a></li>
+        </ul>
+      </nav>
+
+      <section class="my-spaces">
+        <h4 class="sidebar-section-title">My Spaces</h4>
+        <ul>
+          <li><a href="#" class="space-item"><span class="space-dot" style="background:#6C63FF"></span>300 Level</a></li>
+          <li><a href="community-page.html" class="space-item"><span class="space-dot" style="background:#43CEED"></span>Computer Science</a></li>
+          <li><a href="#" class="space-item"><span class="space-dot" style="background:#FF6584"></span>Tech Enthusiasts</a></li>
+        </ul>
+      </section>
+    </aside>
+
+    <!-- Chat Layout -->
+    <main class="chat-main">
+
+      <!-- Conversations List -->
+      <aside class="conversations-panel">
+        <div class="conversations-header">
+          <h2>Messages</h2>
+          <button class="icon-btn new-chat-btn" aria-label="New message">✏️</button>
+        </div>
+
+        <div class="conversations-search">
+          <span class="search-icon">🔍</span>
+          <input type="search" placeholder="Search conversations..." />
+        </div>
+
+        <!-- Tabs -->
+        <div class="conv-tabs">
+          <button class="conv-tab active" data-conv-tab="all">All</button>
+          <button class="conv-tab" data-conv-tab="unread">Unread</button>
+          <button class="conv-tab" data-conv-tab="groups">Groups</button>
+        </div>
+
+        <!-- Conversation List -->
+        <ul class="conversation-list" id="conversation-list">
+
+          <li class="conversation-item active" data-chat="ada">
+            <div class="conv-avatar online">AM</div>
+            <div class="conv-info">
+              <div class="conv-top">
+                <p class="conv-name">Ada Mensah</p>
+                <span class="conv-time">2m</span>
+              </div>
+              <div class="conv-bottom">
+                <p class="conv-preview">Okay I'll send it now 😊</p>
+                <span class="conv-badge">2</span>
+              </div>
+            </div>
+          </li>
+
+          <li class="conversation-item" data-chat="kofi">
+            <div class="conv-avatar online">KO</div>
+            <div class="conv-info">
+              <div class="conv-top">
+                <p class="conv-name">Kofi Owusu</p>
+                <span class="conv-time">15m</span>
+              </div>
+              <div class="conv-bottom">
+                <p class="conv-preview">You: Are you in class?</p>
+              </div>
+            </div>
+          </li>
+
+          <li class="conversation-item" data-chat="csgroup">
+            <div class="conv-avatar group">CS</div>
+            <div class="conv-info">
+              <div class="conv-top">
+                <p class="conv-name">CS Study Group</p>
+                <span class="conv-time">1h</span>
+              </div>
+              <div class="conv-bottom">
+                <p class="conv-preview">Tolu: The exam is tomorrow!</p>
+                <span class="conv-badge">7</span>
+              </div>
+            </div>
+          </li>
+
+          <li class="conversation-item" data-chat="tolu">
+            <div class="conv-avatar">TF</div>
+            <div class="conv-info">
+              <div class="conv-top">
+                <p class="conv-name">Tolu Fashola</p>
+                <span class="conv-time">3h</span>
+              </div>
+              <div class="conv-bottom">
+                <p class="conv-preview">Thanks bro 🙏</p>
+              </div>
+            </div>
+          </li>
+
+          <li class="conversation-item" data-chat="peace">
+            <div class="conv-avatar">PL</div>
+            <div class="conv-info">
+              <div class="conv-top">
+                <p class="conv-name">Peace Lawal</p>
+                <span class="conv-time">1d</span>
+              </div>
+              <div class="conv-bottom">
+                <p class="conv-preview">You: See you tomorrow!</p>
+              </div>
+            </div>
+          </li>
+
+          <li class="conversation-item" data-chat="devclub">
+            <div class="conv-avatar group">DC</div>
+            <div class="conv-info">
+              <div class="conv-top">
+                <p class="conv-name">Dev Club</p>
+                <span class="conv-time">2d</span>
+              </div>
+              <div class="conv-bottom">
+                <p class="conv-preview">Admin: Meeting Friday 4pm</p>
+                <span class="conv-badge">3</span>
+              </div>
+            </div>
+          </li>
+
+        </ul>
+      </aside>
+
+      <!-- Chat Window -->
+      <section class="chat-window" id="chat-window">
+
+        <!-- Chat Header -->
+        <header class="chat-header">
+          <div class="chat-header-info">
+            <div class="conv-avatar sm online">AM</div>
+            <div>
+              <p class="chat-name">Ada Mensah</p>
+              <p class="chat-status">Online</p>
+            </div>
+          </div>
+          <div class="chat-header-actions">
+            <button class="icon-btn" aria-label="Voice call">📞</button>
+            <button class="icon-btn" aria-label="Video call">📹</button>
+            <button class="icon-btn" aria-label="More options">⋯</button>
+          </div>
+        </header>
+
+        <!-- Messages -->
+        <div class="messages-area" id="messages-area">
+
+          <!-- Date Divider -->
+          <div class="date-divider"><span>Today</span></div>
+
+          <!-- Received -->
+          <div class="message-row received">
+            <div class="conv-avatar sm">AM</div>
+            <div class="message-bubble received">
+              <p>Hey! Did you get the Data Structures notes I shared in the CS community?</p>
+              <span class="message-time">10:32 AM</span>
+            </div>
+          </div>
+
+          <!-- Sent -->
+          <div class="message-row sent">
+            <div class="message-bubble sent">
+              <p>Yes I did! Thank you so much 🙏 That was really helpful</p>
+              <span class="message-time">10:34 AM</span>
+            </div>
+          </div>
+
+          <!-- Received -->
+          <div class="message-row received">
+            <div class="conv-avatar sm">AM</div>
+            <div class="message-bubble received">
+              <p>No problem 😊 Are you studying for the exam tomorrow?</p>
+              <span class="message-time">10:35 AM</span>
+            </div>
+          </div>
+
+          <!-- Sent -->
+          <div class="message-row sent">
+            <div class="message-bubble sent">
+              <p>Yes, been at it since morning. Do you want to form a study group?</p>
+              <span class="message-time">10:40 AM</span>
+            </div>
+          </div>
+
+          <!-- Received -->
+          <div class="message-row received">
+            <div class="conv-avatar sm">AM</div>
+            <div class="message-bubble received">
+              <p>That sounds great! Let me call Kofi and Tolu too</p>
+              <span class="message-time">10:41 AM</span>
+            </div>
+          </div>
+
+          <!-- Sent -->
+          <div class="message-row sent">
+            <div class="message-bubble sent">
+              <p>Perfect 👌 Library at 3pm?</p>
+              <span class="message-time">10:42 AM</span>
+            </div>
+          </div>
+
+          <!-- Received -->
+          <div class="message-row received">
+            <div class="conv-avatar sm">AM</div>
+            <div class="message-bubble received">
+              <p>Okay I'll send it now 😊</p>
+              <span class="message-time">10:44 AM</span>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Message Input -->
+        <div class="message-input-area">
+          <button class="icon-btn attach-btn" aria-label="Attach file">📎</button>
+          <div class="message-input-wrap">
+            <input
+              type="text"
+              id="message-input"
+              class="message-input"
+              placeholder="Type a message..."
+              autocomplete="off"
+            />
+            <button class="emoji-btn" aria-label="Emoji">😊</button>
+          </div>
+          <button class="send-btn" id="send-btn" aria-label="Send message">➤</button>
+        </div>
+
+      </section>
+
+      <!-- Empty State (shown on mobile before selecting a chat) -->
+      <section class="chat-empty" id="chat-empty" style="display:none;">
+        <div class="empty-icon">💬</div>
+        <h3>Your Messages</h3>
+        <p>Select a conversation to start chatting</p>
+      </section>
+
+    </main>
+
+  </div>
+
+  <script>
+    // Send message
+    const input = document.getElementById('message-input');
+    const sendBtn = document.getElementById('send-btn');
+    const messagesArea = document.getElementById('messages-area');
+
+    function sendMessage() {
+      const text = input.value.trim();
+      if (!text) return;
+
+      const row = document.createElement('div');
+      row.className = 'message-row sent';
+      row.innerHTML = `
+        <div class="message-bubble sent">
+          <p>${text}</p>
+          <span class="message-time">${new Date().toLocaleTimeString([], {hour:'2-digit', minute:'2-digit'})}</span>
+        </div>`;
+      messagesArea.appendChild(row);
+      input.value = '';
+      messagesArea.scrollTop = messagesArea.scrollHeight;
+    }
+
+    sendBtn.addEventListener('click', sendMessage);
+    input.addEventListener('keydown', function(e) {
+      if (e.key === 'Enter') sendMessage();
+    });
+
+    // Switch conversations
+    const convItems = document.querySelectorAll('.conversation-item');
+    convItems.forEach(item => {
+      item.addEventListener('click', function() {
+        convItems.forEach(i => i.classList.remove('active'));
+        this.classList.add('active');
+        // Remove unread badge on click
+        const badge = this.querySelector('.conv-badge');
+        if (badge) badge.remove();
+      });
+    });
+  </script>
+
+</body>
+</html>
