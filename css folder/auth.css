@@ -189,6 +189,17 @@ fieldset {
   box-shadow: 0 0 10px rgba(67, 206, 237, 0.25);
 }
 
+.form-error {
+  background: rgba(255, 101, 132, 0.12);
+  border: 1px solid rgba(255, 101, 132, 0.3);
+  color: #FF6584;
+  font-size: 13px;
+  padding: 10px 14px;
+  border-radius: 10px;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
 /* ===== PRIMARY BUTTON ===== */
 .btn-primary {
   width: 100%;
