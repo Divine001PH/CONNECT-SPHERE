@@ -33,7 +33,7 @@
 <section class="card-body">
   <form action="#" method="POST" novalidate id="signup-form">
 
-    <p id="signup-error" class="form-error" style="display:none;"></p>
+    <p id="signup-error" class="form-error" role="alert" style="display:none;"></p>
 
     <fieldset>
       <legend class="sr-only">Personal Information</legend>
@@ -135,7 +135,17 @@
   const signupError = document.getElementById('signup-error');
   const signupBtn = document.getElementById('signup-btn');
 
-  const API_BASE = 'https://solid-spork-q76rj45r4vv924jvx-5000.app.github.dev/api/auth'; // Replace with your actual API base URL
+  function getAuthApiBase() {
+    if (window.CONNECTSPHERE_API_BASE) {
+      return window.CONNECTSPHERE_API_BASE.replace(/\/$/, '');
+    }
+
+    const isLocalFrontend = window.location.protocol === 'file:' ||
+      ((window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') &&
+       window.location.port !== '5000');
+
+    return isLocalFrontend ? 'http://localhost:5000/api/auth' : `${window.location.origin}/api/auth`;
+  }
 
   signupForm.addEventListener('submit', async function (e) {
     e.preventDefault();
@@ -170,7 +180,7 @@
     signupBtn.textContent = 'Creating Account...';
 
     try {
-      const response = await fetch(`${API_BASE}/signup`, {
+      const response = await fetch(`${getAuthApiBase()}/signup`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ fullname, email, password, department, level }),
@@ -199,34 +209,7 @@
     }
   });
 </script>
-<!-- Mobile Bottom Navigation -->
-<nav class="mobile-bottom-nav" aria-label="Mobile navigation">
-  <div class="mobile-nav-inner">
-    <a href="feed.html" class="mobile-nav-item">
-      <span class="mobile-nav-icon">🏠</span>
-      <span>Home</span>
-    </a>
-    <a href="communities.html" class="mobile-nav-item">
-      <span class="mobile-nav-icon">🏘️</span>
-      <span>Communities</span>
-    </a>
-    <a href="chat.html" class="mobile-nav-item">
-      <span class="mobile-nav-icon">💬</span>
-      <span>Chat</span>
-    </a>
-    <a href="events.html" class="mobile-nav-item">
-      <span class="mobile-nav-icon">📅</span>
-      <span>Events</span>
-    </a>
-    <a href="profile.html" class="mobile-nav-item">
-      <span class="mobile-nav-icon">👤</span>
-      <span>Profile</span>
-    </a>
-  </div>
-</nav>
 
-<!-- Sidebar Overlay (mobile) -->
-<div class="sidebar-overlay" id="sidebar-overlay"></div>
 </body>
 
 </html>

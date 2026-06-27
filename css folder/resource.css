@@ -107,16 +107,20 @@
   display: flex;
   align-items: center;
   gap: 16px;
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 14px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-lg);
   padding: 16px;
-  transition: border-color 0.2s ease, transform 0.2s ease;
+  transition: all 0.3s var(--ease-out);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
 }
 
 .resource-item:hover {
-  border-color: rgba(255, 255, 255, 0.2);
-  transform: translateY(-2px);
+  border-color: var(--border-hover);
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-glow);
+  background: var(--bg-card-hover);
 }
 
 /* File Icon */
@@ -131,12 +135,18 @@
   font-weight: 700;
   color: #ffffff;
   flex-shrink: 0;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s var(--ease-spring);
 }
 
-.resource-file-icon.pdf { background: linear-gradient(135deg, #FF6584, #e0365a); }
-.resource-file-icon.doc { background: linear-gradient(135deg, #43CEED, #2a9fbf); }
-.resource-file-icon.slides { background: linear-gradient(135deg, #f5a623, #e08c10); }
-.resource-file-icon.video { background: linear-gradient(135deg, #6C63FF, #4a42d4); }
+.resource-item:hover .resource-file-icon {
+  transform: scale(1.1) rotate(-5deg);
+}
+
+.resource-file-icon.pdf { background: linear-gradient(135deg, #FF6584, #e0365a); box-shadow: 0 4px 12px rgba(255, 101, 132, 0.4); }
+.resource-file-icon.doc { background: linear-gradient(135deg, #43CEED, #2a9fbf); box-shadow: 0 4px 12px rgba(67, 206, 237, 0.4); }
+.resource-file-icon.slides { background: linear-gradient(135deg, #f5a623, #e08c10); box-shadow: 0 4px 12px rgba(245, 166, 35, 0.4); }
+.resource-file-icon.video { background: linear-gradient(135deg, #6C63FF, #4a42d4); box-shadow: 0 4px 12px rgba(108, 99, 255, 0.4); }
 
 /* Resource Details */
 .resource-details {

@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>ConnectSphere — Where Students Connect</title>
-  <link rel="stylesheet" href="css/global.css" />
+  <link rel="stylesheet" href="css folder/global.css" />
   <link rel="stylesheet" href="css folder/landing.css" />
 </head>
 
@@ -48,8 +48,28 @@
       </div>
     </div>
     <div class="hero-illustration" aria-hidden="true">
-      <!-- You can place an SVG or image here later -->
-      <div class="illustration-placeholder"></div>
+      <div class="hero-orbs">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+        <div class="orb-ring orb-ring-1"></div>
+        <div class="orb-ring orb-ring-2"></div>
+        <svg class="hero-graphic" viewBox="0 0 400 340" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="60" y="60" width="280" height="200" rx="20" fill="rgba(108,99,255,0.08)" stroke="rgba(108,99,255,0.25)" stroke-width="1.5"/>
+          <rect x="80" y="80" width="100" height="12" rx="6" fill="rgba(67,206,237,0.3)"/>
+          <rect x="80" y="102" width="160" height="8" rx="4" fill="rgba(255,255,255,0.08)"/>
+          <rect x="80" y="118" width="140" height="8" rx="4" fill="rgba(255,255,255,0.06)"/>
+          <rect x="80" y="145" width="240" height="60" rx="12" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+          <circle cx="104" cy="175" r="14" fill="rgba(108,99,255,0.3)"/>
+          <rect x="128" y="165" width="80" height="8" rx="4" fill="rgba(255,255,255,0.12)"/>
+          <rect x="128" y="179" width="120" height="6" rx="3" fill="rgba(255,255,255,0.06)"/>
+          <rect x="80" y="220" width="60" height="28" rx="8" fill="rgba(108,99,255,0.2)" stroke="rgba(108,99,255,0.35)" stroke-width="1"/>
+          <rect x="150" y="220" width="60" height="28" rx="8" fill="rgba(255,101,132,0.15)" stroke="rgba(255,101,132,0.3)" stroke-width="1"/>
+          <circle cx="330" cy="50" r="8" fill="rgba(67,206,237,0.4)"/>
+          <circle cx="50" cy="250" r="6" fill="rgba(255,101,132,0.4)"/>
+          <circle cx="360" cy="280" r="5" fill="rgba(245,166,35,0.4)"/>
+        </svg>
+      </div>
     </div>
   </section>
   <section id="features">
@@ -167,7 +187,7 @@
   </div>
 
    <div class="footer-bottom">
-    <p>&copy; 2025 ConnectSphere. Built with ❤️ by students.</p>
+    <p>&copy; 2026 ConnectSphere. Built with ❤️ by students.</p>
   </div>
 </footer>
 
@@ -180,33 +200,6 @@
     navLinks.classList.toggle('open');
   });
 </script>
-<!-- Mobile Bottom Navigation -->
-<nav class="mobile-bottom-nav" aria-label="Mobile navigation">
-  <div class="mobile-nav-inner">
-    <a href="feed.html" class="mobile-nav-item">
-      <span class="mobile-nav-icon">🏠</span>
-      <span>Home</span>
-    </a>
-    <a href="communities.html" class="mobile-nav-item">
-      <span class="mobile-nav-icon">🏘️</span>
-      <span>Communities</span>
-    </a>
-    <a href="chat.html" class="mobile-nav-item">
-      <span class="mobile-nav-icon">💬</span>
-      <span>Chat</span>
-    </a>
-    <a href="events.html" class="mobile-nav-item">
-      <span class="mobile-nav-icon">📅</span>
-      <span>Events</span>
-    </a>
-    <a href="profile.html" class="mobile-nav-item">
-      <span class="mobile-nav-icon">👤</span>
-      <span>Profile</span>
-    </a>
-  </div>
-</nav>
 
-<!-- Sidebar Overlay (mobile) -->
-<div class="sidebar-overlay" id="sidebar-overlay"></div>
 </body>
 </html>

@@ -36,18 +36,22 @@
 
 /* Community Card */
 .community-card {
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 16px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-lg);
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  transition: transform 0.2s ease, border-color 0.2s ease;
+  transition: all 0.3s var(--ease-out);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
 }
 
 .community-card:hover {
-  transform: translateY(-3px);
-  border-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-4px);
+  border-color: var(--border-hover);
+  box-shadow: var(--shadow-glow);
+  background: var(--bg-card-hover);
 }
 
 /* Banner */
@@ -65,18 +69,27 @@
 }
 
 .community-icon {
-  width: 44px;
-  height: 44px;
+  width: 48px;
+  height: 48px;
   border-radius: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
   font-weight: 700;
-  font-size: 13px;
+  font-size: 16px;
   color: #ffffff;
   flex-shrink: 0;
   margin-top: -28px;
-  border: 3px solid #1a1a35;
+  border: 3px solid var(--bg-elevated);
+  background: var(--gradient-primary);
+  box-shadow: var(--shadow-sm);
+  position: relative;
+  transition: transform 0.3s var(--ease-spring);
+}
+
+.community-card:hover .community-icon {
+  transform: scale(1.1);
+  box-shadow: var(--shadow-glow);
 }
 
 .community-text h3 {

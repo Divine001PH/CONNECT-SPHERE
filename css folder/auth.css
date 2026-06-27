@@ -1,6 +1,3 @@
-/* ===== IMPORT FONT ===== */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
-
 /* ===== RESET & BASE ===== */
 * {
   margin: 0;
@@ -23,10 +20,10 @@ body {
 
 /* ===== DECORATIVE BLOBS ===== */
 .blob {
-  position: fixed; /* ← changed from absolute to fixed */
+  position: fixed;
   border-radius: 50%;
-  filter: blur(70px);
-  opacity: 0.35;
+  filter: blur(80px);
+  opacity: 0.4;
   z-index: 0;
   animation: floatBlob 8s ease-in-out infinite;
 }
@@ -47,7 +44,7 @@ body {
   display: block;
   font-size: 13px;
   font-weight: 500;
-  color: rgba(255, 255, 255, 0.75);
+  color: var(--text-secondary);
   margin-bottom: 6px;
 }
 
@@ -64,7 +61,7 @@ fieldset {
 .blob-1 {
   width: 400px;
   height: 400px;
-  background: #6C63FF;
+  background: var(--primary);
   top: -100px;
   left: -100px;
   animation-delay: 0s;
@@ -73,7 +70,7 @@ fieldset {
 .blob-2 {
   width: 350px;
   height: 350px;
-  background: #FF6584;
+  background: var(--accent-pink);
   bottom: -80px;
   right: -80px;
   animation-delay: 2s;
@@ -82,7 +79,7 @@ fieldset {
 .blob-3 {
   width: 300px;
   height: 300px;
-  background: #43CEED;
+  background: var(--accent);
   bottom: 100px;
   left: 10%;
   animation-delay: 4s;
@@ -91,7 +88,7 @@ fieldset {
 .blob-4 {
   width: 250px;
   height: 250px;
-  background: #f5a623;
+  background: var(--accent-gold);
   top: 100px;
   right: 10%;
   animation-delay: 6s;
@@ -99,9 +96,9 @@ fieldset {
 
 /* ===== BLOB FLOAT ANIMATION ===== */
 @keyframes floatBlob {
-  0%   { transform: translateY(0px) scale(1); }
-  50%  { transform: translateY(-30px) scale(1.05); }
-  100% { transform: translateY(0px) scale(1); }
+  0%   { transform: translateY(0px) scale(1) rotate(0deg); }
+  50%  { transform: translateY(-30px) scale(1.1) rotate(5deg); }
+  100% { transform: translateY(0px) scale(1) rotate(0deg); }
 }
 
 /* ===== GLASS CARD ===== */
@@ -111,12 +108,13 @@ fieldset {
   width: 100%;
   max-width: 440px;
   padding: 40px 36px;
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 24px;
-  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.3);
+  background: rgba(18, 18, 42, 0.6);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-lg), inset 0 0 0 1px rgba(255,255,255,0.05);
+  animation: slideInUp 0.6s var(--ease-out);
 }
 
 /* ===== CARD HEADER ===== */
@@ -126,20 +124,20 @@ fieldset {
 }
 
 .card-header .logo {
-  font-size: 28px;
-  font-weight: 700;
+  font-size: 32px;
+  font-weight: 800;
   color: #ffffff;
-  letter-spacing: 1px;
+  letter-spacing: 0.5px;
 }
 
 .card-header .logo span {
-  color: #43CEED;
+  color: var(--accent);
 }
 
 .card-header .tagline {
-  font-size: 13px;
-  color: rgba(255, 255, 255, 0.6);
-  margin-top: 4px;
+  font-size: 14px;
+  color: var(--text-secondary);
+  margin-top: 6px;
 }
 
 /* ===== FORM GROUP ===== */
@@ -155,18 +153,18 @@ fieldset {
 .form-group select {
   width: 100%;
   padding: 13px 16px;
-  background: rgba(255, 255, 255, 0.12);
-  border: 1px solid rgba(255, 255, 255, 0.25);
-  border-radius: 12px;
+  background: rgba(0, 0, 0, 0.2);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-md);
   color: #ffffff;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Inter', 'Poppins', sans-serif;
   font-size: 14px;
   outline: none;
-  transition: border 0.3s ease, box-shadow 0.3s ease;
+  transition: all 0.3s var(--ease-out);
 }
 
 .form-group input::placeholder {
-  color: rgba(255, 255, 255, 0.45);
+  color: var(--text-tertiary);
 }
 
 .auth-wrapper {
@@ -185,8 +183,9 @@ fieldset {
 
 .form-group input:focus,
 .form-group select:focus {
-  border: 1px solid #43CEED;
-  box-shadow: 0 0 10px rgba(67, 206, 237, 0.25);
+  border-color: var(--primary-light);
+  box-shadow: 0 0 0 4px rgba(108, 99, 255, 0.15);
+  background: rgba(0, 0, 0, 0.3);
 }
 
 .form-error {
@@ -198,6 +197,12 @@ fieldset {
   border-radius: 10px;
   margin-bottom: 16px;
   text-align: center;
+}
+
+.form-error.success {
+  background: rgba(67, 233, 123, 0.12);
+  border-color: rgba(67, 233, 123, 0.3);
+  color: #43e97b;
 }
 
 /* ===== PRIMARY BUTTON ===== */
@@ -223,6 +228,11 @@ fieldset {
 
 .btn-primary:active {
   transform: translateY(0px);
+}
+
+.btn-primary:disabled {
+  transform: none;
+  box-shadow: none;
 }
 
 /* ===== CARD FOOTER ===== */

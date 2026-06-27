@@ -110,23 +110,46 @@
 
 /* Event Card */
 .event-card {
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 16px;
-  overflow: hidden;
+  background: var(--bg-card);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-lg);
+  padding: 20px;
   display: flex;
-  flex-direction: column;
-  transition: transform 0.2s ease, border-color 0.2s ease;
+  gap: 16px;
+  transition: all 0.3s var(--ease-out);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
 }
 
 .event-card:hover {
-  transform: translateY(-3px);
-  border-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-4px);
+  border-color: var(--border-hover);
+  box-shadow: var(--shadow-glow);
+  background: var(--bg-card-hover);
 }
 
 .event-card.featured {
-  grid-column: span 2;
-  flex-direction: row;
+  border: 1px solid rgba(108, 99, 255, 0.4);
+  background: linear-gradient(135deg, rgba(108, 99, 255, 0.1), rgba(255, 101, 132, 0.05));
+  box-shadow: inset 0 0 20px rgba(108, 99, 255, 0.1);
+}
+
+.event-card.featured:hover {
+  box-shadow: var(--shadow-glow), inset 0 0 30px rgba(108, 99, 255, 0.2);
+}
+
+.event-date-block {
+  width: 60px;
+  height: 64px;
+  background: rgba(108, 99, 255, 0.15);
+  border: 1px solid rgba(108, 99, 255, 0.3);
+  border-radius: var(--radius-md);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 4px 10px rgba(108, 99, 255, 0.1);
 }
 
 /* Event Banner */

@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ConnectSphere — Log In</title>
-  <link rel="stylesheet" href="css/global.css" />
+  <link rel="stylesheet" href="css folder/global.css" />
   <link rel="stylesheet" href="css folder/auth.css" />
 </head>
 
@@ -30,7 +30,8 @@
 
       <!-- Login Form -->
       <section class="card-body">
-        <form action="#" method="POST" novalidate>
+        <form action="#" method="POST" novalidate id="login-form">
+          <p id="login-error" class="form-error" role="alert" style="display:none;"></p>
 
           <fieldset>
             <legend class="sr-only">Login Credentials</legend>
@@ -80,39 +81,71 @@
   </main>
 
   <script>
-  document.querySelector('form').addEventListener('submit', function(e) {
+  const loginForm = document.getElementById('login-form');
+  const loginError = document.getElementById('login-error');
+  const loginBtn = loginForm.querySelector('button[type="submit"]');
+
+  function getAuthApiBase() {
+    if (window.CONNECTSPHERE_API_BASE) {
+      return window.CONNECTSPHERE_API_BASE.replace(/\/$/, '');
+    }
+
+    const isLocalFrontend = window.location.protocol === 'file:' ||
+      ((window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') &&
+       window.location.port !== '5000');
+
+    return isLocalFrontend ? 'http://localhost:5000/api/auth' : `${window.location.origin}/api/auth`;
+  }
+
+  function showLoginMessage(message, isSuccess = false) {
+    loginError.textContent = message;
+    loginError.classList.toggle('success', isSuccess);
+    loginError.style.display = 'block';
+  }
+
+  loginForm.addEventListener('submit', async function(e) {
     e.preventDefault();
-    alert('Form submitted! (Backend not connected yet)');
+    loginError.style.display = 'none';
+    loginError.classList.remove('success');
+
+    const email = document.getElementById('email').value.trim();
+    const password = document.getElementById('password').value;
+
+    if (!email || !password) {
+      showLoginMessage('Please provide email and password');
+      return;
+    }
+
+    loginBtn.disabled = true;
+    loginBtn.textContent = 'Logging In...';
+
+    try {
+      const response = await fetch(`${getAuthApiBase()}/login`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email, password }),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        showLoginMessage(data.message || 'Unable to log in');
+        return;
+      }
+
+      localStorage.setItem('token', data.token);
+      localStorage.setItem('user', JSON.stringify(data.user));
+      showLoginMessage('Login successful. Redirecting...', true);
+      window.location.href = 'feed.html';
+    } catch (error) {
+      showLoginMessage('Could not connect to server. Please try again.');
+    } finally {
+      loginBtn.disabled = false;
+      loginBtn.textContent = 'Log In';
+    }
   });
 </script>
-<!-- Mobile Bottom Navigation -->
-<nav class="mobile-bottom-nav" aria-label="Mobile navigation">
-  <div class="mobile-nav-inner">
-    <a href="feed.html" class="mobile-nav-item">
-      <span class="mobile-nav-icon">🏠</span>
-      <span>Home</span>
-    </a>
-    <a href="communities.html" class="mobile-nav-item">
-      <span class="mobile-nav-icon">🏘️</span>
-      <span>Communities</span>
-    </a>
-    <a href="chat.html" class="mobile-nav-item">
-      <span class="mobile-nav-icon">💬</span>
-      <span>Chat</span>
-    </a>
-    <a href="events.html" class="mobile-nav-item">
-      <span class="mobile-nav-icon">📅</span>
-      <span>Events</span>
-    </a>
-    <a href="profile.html" class="mobile-nav-item">
-      <span class="mobile-nav-icon">👤</span>
-      <span>Profile</span>
-    </a>
-  </div>
-</nav>
 
-<!-- Sidebar Overlay (mobile) -->
-<div class="sidebar-overlay" id="sidebar-overlay"></div>
 </body>
 
 </html>
